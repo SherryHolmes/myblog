@@ -1,0 +1,259 @@
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('/css/fonts/Montserrat-Regular.ttf');
+}
+
+/* reset.css */
+body, div, dl, dt, dd, ul, li, h1, h2, section,
+h3, h4, h5, h6, input, form, a, p, textarea {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Montserrat-Regular", "Adobe Fan Heiti Std B", Arial, sans-serif; }
+
+body {
+  background: #222f40;
+  overflow-x: hidden; 
+  margin: 20px;
+}
+
+ol, ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  display: block;
+  color: #fff; }
+
+img {
+  border: none;
+  display: block; }
+
+/*清除浮动*/
+.clearfloat {
+  zoom: 1; }
+
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: '';
+  visibility: hidden;
+  height: 0; }
+
+
+/* test.css */
+.index-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #222f40;
+}
+
+.bg-text {
+  position: relative;
+  margin-top: 15px;
+  width: 100%;
+  height: 384px;
+  color: rgba(144,153,163, .08);
+  font-family: "Montserrat-regular";
+  font-size: 500px;
+  text-align: right;
+  line-height: 388px;
+}
+
+.bg-sub-text {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height: 80px;
+  color: rgba(144,153,163, .08);
+  text-align: right;
+  font-size: 100px;
+  line-height: 80px;
+}
+
+.index-header {
+  position: relative;
+  width: 100%;
+  height: 370px;
+}
+
+.index-header .head-left {
+  float: left;
+  margin-top: 100px;
+}
+
+.index-header .head-right {
+  float: right;
+  margin-top: 160px;
+}
+
+.index-header .text {
+  color: #fff;
+  font-size: 50px;
+}
+
+.index-header .sub-text {
+  color: #ab92c5;
+  font-size: 20px;
+  margin-left: 148px;
+  font-weight: 700;
+}
+
+.index-header .head-right .right-text {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 20px;
+  text-align: right;
+}
+
+.index-header .head-right .right-circle {
+  width: 320px;
+  height: 60px;
+}
+
+.head-right .right-circle li {
+  margin: 2px;
+  float: left;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.head-right .right-circle .item1 {
+  background: #fbbb3c;
+}
+
+.head-right .right-circle .item2 {
+  background: #4bbde1;
+}
+
+.head-right .right-circle .item3 {
+  background: #a186be;
+}
+
+.head-right .right-circle .item4 {
+  background: #605ca8;
+}
+
+.head-right .right-circle .item5 {
+  background: #3cb878;
+}
+
+
+.head-right .right-circle .circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: -webkit-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,.3)); /* Safari 5.1 - .3.0 */
+  background: -o-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.3)); /* Opera 11.1 - .32.0 */
+  background: -moz-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.3)); /* Firefox 3.6 -.315 */
+  background: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,.3)); /* 标准的语法（必须放在最后）.3*/
+}
+
+.index-body {
+  position: relative;
+  width: 1362px;
+  height: 1057px;
+  /* border: 1px solid #fff; */
+}
+
+.index-body .body-left {
+  float: left;
+}
+
+.index-body .body-right {
+  float: right;
+}
+
+
+.left-temper {
+  position: relative;
+  height: 212px;
+  width: 329px;
+  border-radius: 12px;
+  background: url("../images/temper.jpg") no-repeat;
+}
+
+.left-temper .mask {
+  height: 212px;
+  width: 329px;
+  border-radius: 12px;
+  background: -webkit-linear-gradient(bottom, rgba(250,172,28,0), rgba(250,172,28,.3)); /* Safari 5.1 - .3.0 */
+  background: -o-linear-gradient(top, rgba(250,172,28,0), rgba(250,172,28,.3)); /* Opera 11.1 - .32.0 */
+  background: -moz-linear-gradient(top, rgba(250,172,28,0), rgba(250,172,28,.3)); /* Firefox 3.6 -.315 */
+  background: linear-gradient(to top, rgba(250,172,28,0), rgba(250,172,28,.3)); /* 标准的语法（必须放在最后）.3*/
+}
+
+.left-temper .clock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 132px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  background: rgba(0,0,0,0.1);
+}
+
+.left-temper .temper {
+  position: absolute;
+  top: 132px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background: rgba(84,193,137,.88);
+}
+
+.left-temper .clock .left {
+  font-family: "Montserrat-regular";
+  float: left;
+  line-height: 132px;
+  margin-left: 10px;
+  color: #fff;
+  font-size: 50px;
+}
+
+.left-temper .clock .right {
+  font-family: "Myriad Pro";
+  float: right;
+  line-height: 132px;
+  margin-right: 10px;
+  font-size: 110px;
+  color: rgba(255,255,255,0.3);
+}
+
+.left-temper .temper li {
+  font-family: "Myriad Pro";
+  float: left;
+  width: 109px;
+  height: 80px;
+  text-align: center;
+}
+
+.left-temper .temper .item1 {
+  display: block;
+  color: #fff;
+  font-size: 70px;
+  line-height: 90px;
+}
+
+.left-temper .temper .item2 {
+  display: block;
+  color: #fff;
+  font-size: 21px;
+  margin-top: 24px;
+}
+
+.left-temper .temper .item2 .sub {
+  font-size: 13px;
+}
+
+.left-temper .temper .item3 img {
+  margin-top: 10px;
+}
