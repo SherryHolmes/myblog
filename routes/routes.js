@@ -21,3 +21,8 @@ module.exports = router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+/* GET test page. */
+module.exports = router.get('/test', function (req, res, next) {
+  res.render('test', { title: 'test' });
+});
+
