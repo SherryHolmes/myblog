@@ -16,6 +16,10 @@ module.exports = router.get('/force', function(req, res, next) {
   res.render('force', { title: '力导向图页' });
 });
 
+module.exports = router.get('/test-page', function(req, res, next) {
+  res.render('test-page', { title: '测试页面' });
+});
+
 /* GET users listing. */
 module.exports = router.get('/', function(req, res, next) {
   res.send('respond with a resource');
