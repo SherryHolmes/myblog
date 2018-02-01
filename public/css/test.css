@@ -303,8 +303,13 @@ img {
 
 .feature-img {
   float: right;
-  margin-top: 100px;
-  margin-right: 150px; }
+  margin-top: 30px;
+  margin-right: 250px; }
+
+.feature-img img{
+  height: 400px;
+  width: auto; 
+}
 
 .index-contact {
   position: relative;
