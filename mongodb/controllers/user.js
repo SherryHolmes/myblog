@@ -69,9 +69,14 @@ exports.showLogup = function(req, res) {
 exports.logup = function(req, res) {
   var name = req.body.name;
   var password = req.body.password;
+  var role = 0;
+  if (name === "admin") {
+    role = 100;
+  }
   var userObj = {
     name: name,
-    password: password
+    password: password,
+    role: role
   }
   User.findOne({name : name}, function(err, user) {
     if (err) {
