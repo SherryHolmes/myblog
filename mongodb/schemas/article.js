@@ -6,6 +6,10 @@ var ArticleSchema = new Schema({
   title: String,
   sub_title: String,
   content: String,
+  pv: {
+    type: Number,
+    default: 0
+  },
   meta: {
     createAt: {
       type: Date,

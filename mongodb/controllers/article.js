@@ -63,7 +63,15 @@ exports.save = function (req, res) {
 exports.detail = function (req, res) {
   var id = req.params.id;
   if (id) {
+    Article.update({ _id: id }, { $inc: { pv: 1 }}, function(err) {
+      if (err) {
+        console.log(err);
+      }
+    })    
     Article.findById(id, function (err, article) {
+      if (err) {
+        console.log(err);
+      }
       res.render('detail', {
         title: article.title,
         content: article.content,
