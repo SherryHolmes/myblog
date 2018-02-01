@@ -26,6 +26,18 @@
   <input id="article-length" type="hidden" value='<%=articles.length %>'>
   <div class="blog-header">
     <div class="header-logo">SherryHolmes</div>
+      <% if(user) {%>
+        <div class="nav-login">
+          <div class="login-item user-name">
+            <%=user.name %><span> | </span>
+          </div>
+          <div class="login-item"><a href="/logout">Logout</a></div>
+        </div>
+        <% } else {%>
+          <div class="nav-login">
+            <a href="/login">Login<span> | </span>Logup</a>
+        </div>
+      <% } %>
     <ul class="header-menu">
       <li class="item"><a href="/" target="_blank">Home</a></li>
       <li class="item active"><a href="">Articles</a></li>

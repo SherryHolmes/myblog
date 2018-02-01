@@ -255,3 +255,30 @@ footer ul.share-group {
   overflow: hidden;
   padding: 2px !important;
 }
+
+
+.nav-login {
+  float: right;
+  margin-right: 50px;
+  font-family: "Segoe UI";
+  font-weight: 700;
+  color: #fff; 
+  line-height: 60px;
+}
+
+.nav-login .user-name span {
+  color: #fff;
+}
+
+.nav-login .user-name {
+  color: #de2323;
+}
+
+.nav-login a:hover {
+  color: #de2323;
+  text-decoration: underline;
+}
+
+.nav-login .login-item {
+  float: left;
+}

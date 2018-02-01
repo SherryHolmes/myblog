@@ -45,7 +45,8 @@ img {
   left: 0;
   width: 100%;
   height: 150px;
-  background: rgba(57, 68, 75, 0.8); }
+  background: rgba(57, 68, 75, 0.8); 
+}
 
 .nav-title {
   float: left;
@@ -62,8 +63,9 @@ img {
 .nav-menu {
   display: block;
   float: right;
-  margin-right: 200px;
-  margin-top: 56px; }
+  margin-right: 100px;
+  margin-top: 56px; 
+}
 
 .nav-menu .item {
   float: left;
@@ -74,17 +76,28 @@ img {
   text-align: center; }
 
 .nav-login {
-  position: absolute;
-  top: 40px;
-  right: 100px;
-  width: 80px;
-  height: 32px;
-  /* margin-left: 10px; */
-  line-height: 32px;
-  text-align: center; 
+  float: right;
+  margin-right: 50px;
+  font-family: "Segoe UI";
+  font-weight: 700;
+  color: #fff; 
+  margin-top: 56px; 
 }
 
-.login-item {
+.nav-login .user-name span {
+  color: #fff;
+}
+
+.nav-login .user-name {
+  color: #4bcaff;
+}
+
+.nav-login a:hover {
+  color: #4bcaff;
+  text-decoration: underline;
+}
+
+.nav-login .login-item {
   float: left;
 }
 

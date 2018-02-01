@@ -21,9 +21,9 @@ module.exports = function (app) {
   app.get('/article/update/id', User.loginRequired, User.adminRequired, Article.update);
   app.get('/article/new', User.loginRequired, User.adminRequired, Article.new);
   app.post('/article', User.loginRequired, User.adminRequired, Article.save);
-  app.get('/article/detail:id', User.loginRequired, Article.detail);
-  app.get('/blog', User.loginRequired, Article.blog);
-  app.get('/articleDetail/id', User.loginRequired, Article.articleDetail);
+  app.get('/article/detail:id', Article.detail);
+  app.get('/blog', Article.blog);
+  app.get('/articleDetail/id', Article.articleDetail);
 
   // User
   app.post('/user/logup', User.logup);

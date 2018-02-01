@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Sherry的网页设计</title>
+  <title><%=title %></title>
   <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/test.css">
 </head>
@@ -12,6 +12,18 @@
   <div class="index-header">
     <div class="head-nav">
       <div class="nav-title">Sherry<span>H</span>olmes</div>
+      <% if(user) {%>
+      <div class="nav-login">
+        <div class="login-item user-name">
+          <%=user.name %><span> | </span>
+        </div>
+        <div class="login-item"><a href="/logout">Logout</a></div>
+      </div>
+      <% } else {%>
+        <div class="nav-login">
+          <a href="/login">Login<span> | </span>Logup</a>
+        </div>
+      <% } %>
       <ul class="nav-menu">
         <li class="item active"><a href="/">HOME</a></li>
         <li class="item"><a href="/blog" target="_blank">ARTICLES</a></li>
@@ -20,16 +32,6 @@
         <li class="item"><a href="#leave-word">MESSAGES</a></li>
         <li class="item"><a href="/test">MYTEST</a></li>
       </ul>
-      <% if(user) {%>
-        <div class="nav-login">
-          <div class="login-item"><%=user.name %></div>
-          <div class="login-item"><a href="/login">Logout</a></div>
-        </div>
-      <% } else {%>
-        <div class="nav-login">
-          <a href="/login">Login<span> | </span>Logup</a>
-        </div>
-      <% } %>
     </div>
     <div class="head-banner">
       <div class="banner-text">
