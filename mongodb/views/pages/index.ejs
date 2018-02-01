@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sherry的网页设计</title>
+  <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/test.css">
+</head>
+<body>
+  <div class="index-header">
+    <div class="head-nav">
+      <div class="nav-title">Sherry<span>H</span>olmes</div>
+      <ul class="nav-menu">
+        <li class="item active"><a href="/">HOME</a></li>
+        <li class="item"><a href="/blog" target="_blank">ARTICLES</a></li>
+        <li class="item"><a href="#about-me">ABOUTME</a></li>
+        <li class="item"><a href="#contact-me">CONTACT</a></li>
+        <li class="item"><a href="#leave-word">MESSAGES</a></li>
+        <li class="item"><a href="/test">MYTEST</a></li>
+      </ul>
+      <% if(user) {%>
+        <div class="nav-login">
+          <div class="login-item"><%=user.name %></div>
+          <div class="login-item"><a href="/login">Logout</a></div>
+        </div>
+      <% } else {%>
+        <div class="nav-login">
+          <a href="/login">Login<span> | </span>Logup</a>
+        </div>
+      <% } %>
+    </div>
+    <div class="head-banner">
+      <div class="banner-text">
+        <div class="text1">“I’M LOOKING FOR THE UNEXPECTED.</div>
+        <div class="text2">I’M LOOKING FOR THINGS I’VE NEVER SEEN BEFORE.”</div>
+      </div>
+    </div>
+  </div>
+  <div class="index-func">
+    <div class="func-title">FUNCTIONS
+      <div class="line"></div>
+    </div>
+    <ul class="func-panel">
+      <li class="item">
+        <img src="/images/icon1.gif" alt="">
+        <h4>FUN</h4>
+        <p>Apple pie icing sweet. Brownie jelly-o applicake applicake sweet roll liquorice bear claw. Jujubes carrot cake cotton candy sweet tart brownie. Tiramisu applicake jujubes.</p>
+      </li>
+      <li class="item">
+        <img src="/images/icon2.gif" alt="">
+        <h4>ARTICLE</h4>
+        <p>Apple pie icing sweet. Brownie jelly-o applicake applicake sweet roll liquorice bear claw. Jujubes carrot cake cotton candy sweet tart brownie. Tiramisu applicake jujubes.</p>
+      </li>
+      <li class="item">
+        <img src="/images/icon3.gif" alt="">
+        <h4>ABOUTS</h4>
+        <p>Apple pie icing sweet. Brownie jelly-o applicake applicake sweet roll liquorice bear claw. Jujubes carrot cake cotton candy sweet tart brownie. Tiramisu applicake jujubes.</p>
+      </li>
+      <li class="item">
+        <img src="/images/icon4.gif" alt="">
+        <h4>LINKS</h4>
+        <p>Apple pie icing sweet. Brownie jelly-o applicake applicake sweet roll liquorice bear claw. Jujubes carrot cake cotton candy sweet tart brownie. Tiramisu applicake jujubes.</p>
+      </li>
+    </ul>
+  </div>
+  <div class="index-funny">
+    <div class="funny-title">FUNNY PAGES</div>
+    <ul class="funny-panel">
+      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
+      </li>
+      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
+      </li>
+      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
+      </li>
+      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
+      </li>
+      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
+      </li>
+      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
+      </li>
+      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
+      </li>
+      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
+      </li>
+    </ul>
+  </div>
+  <div class="index-feature">
+    <div class="feature-content">
+      <h4 class="content-title">FEATURE ARTICLES</h4>
+      <p>Bear claw marzipan bear claw applicake I love muffin. Lemon drops gummi bears pastry gummi bears sesame snaps I love unerdwear.com.
+      Soufflé cotton candy dessert candy ice cream wafer gummies cheesecake brownie. 
+      </p>
+      <p>Muffin chupa chups jelly beans sweet
+      pie applicake. Croissant chocolate cake I love pudding. Ice cream I love powder pudding apple pie marshmallow. Cupcake
+      marzipan oat cake bonbon I love candy canes toffee</p>
+      <div class="article-btn">
+        <a href="">CLICK ME</a> 
+      </div>
+    </div>
+    <div class="feature-img">
+      <img src="/images/article.jpg" alt="">
+    </div>
+  </div>
+  <div class="index-contact" id="contact-me">
+    <div class="contact-me">CONTACT ME</div>
+    <div class="contact-icon">
+      <a target="_blank" href="https://passport.weibo.com" class="icon-sina-weibo">
+        <i class="fa fa-weibo fa-fw"></i>
+      </a>
+    </div>
+    <p>I love programming.If you are interested, please contact me.Let's explore and learn from each other.</br>
+     QQ:896907062<br>e-mail:haorui5@163.com</p>
+  </div>
+  <div class="index-aboutme">
+    <ul class="about-me" id="about-me">
+      <li class="item">
+        <div class="title">Who Is Sherry Holmes?</div>
+        <div class="content">
+           Bear claw marzipan bear claw applicake I love muffin. Lemon drops gummi bears pastry gummi bears sesame snaps I love unerdwear.com.
+          Soufflé cotton candy dessert candy ice cream wafer gummies cheesecake brownie. 
+          <br><br><br>
+          Muffin chupa chups jelly beans sweet
+          pie applicake. Croissant chocolate cake I love pudding. Ice cream I love powder pudding apple pie marshmallow.
+          Cupcake marzipan oat cake bonbon I love candy canes toffee.
+        </div>
+      </li>
+      <li class="item">
+        <div class="content">
+        <br><br>Pudding dessert jujubes tiramisu gingerbread croissant tiramisu applicake. Sesame snaps sugar plum cotton candy chocolate
+        bonbon lemon drops candy canes cotton candy. Cake toffee pie bear claw pastry.
+        </div>
+        <ul class="links">
+          <li class="link-item">
+            <a target="_blank" href="http://github.com/" class="icon-github">
+              <i class="fa fa-github fa-fw"></i>
+            </a>
+          </li>
+          <li class="link-item">
+            <a target="_blank" href="http://google.com" class="icon-google-plus3">
+              <i class="fa fa-google fa-fw"></i>
+            </a>
+          </li>
+          <li class="link-item">
+            <a target="_blank" href="https://passport.weibo.com" class="icon-sina-weibo">
+              <i class="fa fa-weibo fa-fw"></i>
+            </a>
+          </li>
+          <li class="link-item">
+            <a target="_blank" href="http://ihaorui.me/" class="icon-comment">
+              <i class="fa fa-home fa-fw"></i>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="index-testimonials">
+    <div class="testimonials-title">TESTIMONIALS</div>
+    <div class="testimonials-icon">
+      <i class="fa fa-heart fa-fw"></i>
+    </div>
+    <p>Applicake chocolate cake wafer toffee pie soufflé wafer. Tart marshmallow wafer macaroon cheesecake jelly. Gingerbread cookie
+      soufflé sweet roll sweet roll jelly-o.</p>
+    <h5>Sherry Holmes</h5>
+  </div>
+  <div class="index-leave-words" id="leave-word">
+    <div class="message-title">LEAVE WORDS</div>
+    <form class="leave-words" action="">
+      Full name:<br>
+      <input type="text" name="fullname" >
+      <br>Email:<br>
+      <input type="text" name="email">
+      <br> Message:<br>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <br><br>
+      <input type="submit" class="message" value="MESSAGE">
+      <div class="text">
+        <ul>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odio laudantium in et ipsam maxime quae accusantium voluptatum dolor tenetur ullam quasi aut ea inventore porro, veniam repellendus impedit suscipit.</li>
+          <li>QQ:896907062</li>
+          <li>e-mail: haorui5@163.com</li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </form>
+  </div>
+  <div class="index-footer">
+    <ul class="footer-menu">
+      <li class="item"><a href="">HOME<span>|</span></a></li>
+      <li class="item"><a href="">FUNCTIONS<span>|</span></a></li>
+      <li class="item"><a href="">FUNNY<span>|</span></a></li>
+      <li class="item"><a href="">FEATURES<span>|</span></a></li>
+      <li class="item"><a href="">MYTEST<span>|</span></a></li>
+      <li class="last">2018 SherryHolmes</li>
+    </ul>
+  </div>
+</body>
+</html>

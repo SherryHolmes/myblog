@@ -1,0 +1,95 @@
+/* public.css *********************/
+.public-header {
+  position: relative;
+  height: 80px;
+  background: rgba(244, 170, 56, 0.7); }
+
+.public-header .header-logo {
+  float: left; }
+
+.public-header .header-logo a {
+  height: 80px;
+  color: #3b3b3b;
+  line-height: 80px; }
+
+.public-header .header-logo p {
+  font-family: "幼圆";
+  font-weight: 700;
+  font-size: 30px;
+  animation: change 2s ease-in infinite; }
+
+@keyframes change {
+  0% {
+    text-shadow: 0 0 4px #f00; }
+  50% {
+    text-shadow: 0 0 40px #f00; }
+  100% {
+    text-shadow: 0 0 4px #f00; } }
+.public-header .header-nav {
+  float: right; }
+
+.public-header .header-nav .item {
+  float: left;
+  font-size: 18px;
+  margin-left: 48px;
+  line-height: 80px; }
+
+.public-header .header-nav a {
+  color: #3b3b3b; }
+
+.public-header .header-nav a:hover {
+  text-decoration: underline;
+  color: #f00;
+  -webkit-animation: Tada 1.5s both;
+  -moz-animation: Tada 1.5s both;
+  -ms-animation: Tada 1.5s both;
+  animation: Tada 1.5s both; }
+
+@-webkit-keyframes Tada {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  70%,73% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg); }
+  77%,83%,90%,97% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg); }
+  80%,87%,93% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg); }
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0); } }
+.public-container {
+  position: relative;
+  margin: 0 auto;
+  width: 1100px; }
+
+.public-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #40445e;
+  color: #fff;
+  min-height: 200px;
+  text-align: center; }
+
+ul.share-group {
+  display: block;
+  width: 1080px;
+  margin: 0 auto;
+  padding: 50px; }
+
+.share-group li {
+  display: inline-block;
+  padding: 10px; }
+
+.share-group li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 40px;
+  padding: 20px; }
+
+.copy {
+  padding-bottom: 20px; }

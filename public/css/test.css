@@ -62,16 +62,50 @@ img {
 .nav-menu {
   display: block;
   float: right;
-  margin-right: 100px;
+  margin-right: 200px;
   margin-top: 56px; }
 
 .nav-menu .item {
   float: left;
   width: 80px;
   height: 32px;
-  margin-right: 50px;
+  margin-right: 20px;
   line-height: 32px;
   text-align: center; }
+
+.nav-login {
+  position: absolute;
+  top: 40px;
+  right: 100px;
+  width: 80px;
+  height: 32px;
+  /* margin-left: 10px; */
+  line-height: 32px;
+  text-align: center; 
+}
+
+.login-item {
+  float: left;
+}
+
+.nav-menu .last a {
+  width: 120px;
+  height: 32px;
+  background: #353f46;
+}
+
+.nav-menu .last >.login-item {
+  float: left;
+}
+
+.nav-menu .last a span {
+  color: #4bcaff;
+}
+
+.nav-menu .last a:hover {
+  border: 2px solid #4bcaff;
+}
+
 
 .nav-menu .item a {
   position: relative;

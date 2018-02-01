@@ -1,32 +1,37 @@
-var express = require('express');
-var router = express.Router();
+var Index = require('../mongodb/controllers/index');
+var Article = require('../mongodb/controllers/article');
+var User = require('../mongodb/controllers/user');
 
-/* GET home page. */
-module.exports = router.get('/', function(req, res, next) {
-  res.render('index', { title: 'SherryHolmes主页' });
-});
+module.exports = function (app) {
+  // pre handle user 预处理
+  app.use(function (req, res, next) {
+    var _user = req.session.user;
+    app.locals.user = _user;
+    next();
+  });
 
-/* GET enjoy page. */
-module.exports = router.get('/enjoy', function(req, res, next) {
-  res.render('enjoy', { title: '美句欣赏页' });
-});
+  //Index
+  app.get('/', Index.index);
+  app.get('/enjoy', Index.enjoy);
+  app.get('/test', Index.test);
+  app.get('/test_page', Index.test_page);
+  app.get('/force', Index.force);
 
-/* GET force page. */
-module.exports = router.get('/force', function(req, res, next) {
-  res.render('force', { title: '力导向图页' });
-});
+  // article
+  app.get('/article/update/id', User.loginRequired, User.adminRequired, Article.update);
+  app.get('/article/new', User.loginRequired, User.adminRequired, Article.new);
+  app.post('/article', User.loginRequired, User.adminRequired, Article.save);
+  app.get('/article/detail:id', User.loginRequired, Article.detail);
+  app.get('/blog', User.loginRequired, Article.blog);
+  app.get('/articleDetail/id', User.loginRequired, Article.articleDetail);
 
-module.exports = router.get('/test-page', function(req, res, next) {
-  res.render('test-page', { title: '测试页面' });
-});
+  // User
+  app.post('/user/logup', User.logup);
+  app.post('/user/login', User.login);
+  app.get('/login', User.showLogin);
+  app.get('/logup', User.showLogup);
+  app.get('/logout', User.logout);
+  app.get('/sign/logout', User.signlogout);
+  app.get('/admin/user/list', User.loginRequired, User.adminRequired, User.list);
 
-/* GET users listing. */
-module.exports = router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
-
-/* GET test page. */
-module.exports = router.get('/test', function (req, res, next) {
-  res.render('test', { title: 'test' });
-});
-
+};

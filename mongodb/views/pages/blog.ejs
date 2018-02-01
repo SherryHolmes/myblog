@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <script src="/js/jquery-1.9.0.min.js"></script>
+  <link rel="stylesheet" href="/libs/redactor/redactor/redactor.css" />
+  <script src="/libs/redactor/redactor/redactor.min.js"></script>
+  <link rel="stylesheet" href="/css/blog.css">
+  <script src="/js/digit.js"></script>
+  <script src="/js/countdown.js"></script>
+  <title>SherryHolmes文章</title>
+    <script type="text/javascript">
+      $(document).ready(
+        function () {
+          $('.article-content').redactor();
+          $('.redactor_editor').attr('contenteditable', false);
+        }
+      );
+        
+    </script>
+</head>
+<body>
+  <input id="article-length" type="hidden" value='<%=articles.length %>'>
+  <div class="blog-header">
+    <div class="header-logo">SherryHolmes</div>
+    <ul class="header-menu">
+      <li class="item"><a href="/" target="_blank">Home</a></li>
+      <li class="item active"><a href="">Articles</a></li>
+      <li class="item"><a href="">AboutMe</a></li>
+      <li class="item"><a href="">Contact</a></li>
+    </ul>
+  </div>
+  <div class="blog-panel">
+    <div class="panel-left clearfloat">
+      <div class="blog-title">
+        <div class="title-content"> Hi, I'm 26 years old guy who has passion in web design, technology, music, etc.
+          <p>This blog is mostly about web design, helping others, to inspire those who need it. Of course, the technology and general
+            views, life opinions. Enjoy reading ;)
+          </p>
+        </div>
+      </div>
+      <ul class="left-list">
+        <% for (var i=0; i<articles.length; i++) { %>
+          <li class="list-item">
+            <div class="title">
+              <%= articles[i].title %>
+              <div class="sub-title">Sherry Holmes</div>
+            </div>
+            <div class="content">
+              <textarea class="content-text article-content" name="content">
+                <%= articles[i].content %>
+              </textarea>
+            </div>
+            <ul class="links">
+              <li class="left-item"><a href="#">收藏</a></li>
+              <li class="left-item"><a href="#">转发</a></li>
+              <li class="right-item read-article">
+                <a href="/article/detail<%= articles[i]._id %>">read article...</a>
+              </li>
+            </ul>
+            <div class="border"></div>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+    <div class="panel-right clearfloat">
+      <a href="/article/new" class="new-file">
+        <i class="fa fa-plus fa-fw"></i>
+        写文章
+      </a>
+      <ul class="right-list">
+        <li class="list-item list-canvas">
+          <canvas id="canvas-clock">
+            当前浏览器不支持Canvas，请更换浏览器后再试
+          </canvas>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <footer id="footer-link">
+    <ul class="share-group">
+      <li>
+        <a target="_blank" href="http://github.com/" class="icon-github">
+          <i class="fa fa-github fa-fw"></i>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="http://google.com" class="icon-google-plus3">
+          <i class="fa fa-google fa-fw"></i>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://passport.weibo.com" class="icon-sina-weibo">
+          <i class="fa fa-weibo fa-fw"></i>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="http://ihaorui.me/" class="icon-comment">
+          <i class="fa fa-home fa-fw"></i>
+        </a>
+      </li>
+    </ul>
+    <div class="copy">
+      &copy SherryHolmes - 2017
+    </div>
+  </footer>
+</body>
+</html>

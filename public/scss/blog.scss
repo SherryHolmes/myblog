@@ -1,0 +1,257 @@
+@import "_reset.scss";
+
+/* blog.css */
+.blog-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 200;
+  background: -webkit-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Safari 5.1 - 6.0 */
+  background: -o-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Opera 11.6 - 12.0 */
+  background: -moz-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Firefox 3.6 - 15 */
+  background: radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* 标准的语法（必须放在最后） */
+}
+
+.blog-header .header-logo {
+  float: left;
+  margin-left: 160px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 550;
+  line-height: 60px;
+  font-style: italic;
+}
+
+.blog-header .header-menu {
+  float: right;
+  margin-right: 150px;
+}
+
+.blog-header .header-menu .item{
+  float: left;
+  margin-right: 12px;
+  width: 120px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  outline: 0;
+  padding: 5px 12px;
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  font-style: italic;
+  text-shadow: 1px 1px #1f272b;
+  border: 1px solid #1c252b;
+  border-bottom-left-radius: 8px;
+  -moz-border-bottom-left-radius: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  -moz-border-bottom-right-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  background: #1e1e1e; /* old browsers */
+  background: -moz-linear-gradient(top, #3D4850 3%, #313d45 4%, #1e1e1e 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(3%,#3D4850), color-stop(4%,#313d45), color-stop(100%,#1e1e1e)); /* webkit */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D4850', endColorstr='#1e1e1e',GradientType=0 ); /* ie */
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* CSS3 */
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Firefox */
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Safari, Chrome */  
+}
+
+.blog-header .header-menu .item a {
+  color: #f7f7f7;
+}
+
+.blog-header .header-menu .active {
+  background: #de2323;
+}
+
+.blog-title {
+  width: 100%;
+  height: 90px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.blog-title .title-content {
+  float : left;
+}
+
+
+.blog-title .title-content p {
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 30px;
+}
+
+.blog-panel {
+  position: relative;
+  width: 1200px;
+  height: 100%;
+  margin-top: 120px;
+}
+
+.blog-panel .panel-left {
+  float: left; 
+  width: 800px;
+  margin-left: 0;
+  margin-bottom: 100px;
+}
+
+.blog-panel .panel-right {
+  position: fixed;
+  left: 900px;
+  height: 1000px;
+  width: 300px;
+  right: 0;
+  top: 120px;
+  margin-bottom: 100px;
+}
+
+.panel-right .new-file {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  color: #3D4850;
+  font-size: 30px;
+}
+
+.panel-right .new-file:hover {
+  color: #202020;
+  text-decoration: underline;
+}
+
+.left-list .list-item {
+  height: 200px;
+  // border: 1px solid #000;
+  margin-bottom: 100px;
+  margin-top: 20px;
+}
+
+.left-list .list-item .title {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000;
+}
+
+.left-list .list-item .title .sub-title {
+  color: #636363;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.left-list .list-item .content {
+  // height: 230px;
+  background: #e0e0e0;
+  margin-top: 20px;
+}
+
+.left-list .list-item > p {
+  color: #2f2f2f;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.left-list .list-item .border {
+  height: 2px;
+  background: #B3ADAD;
+  margin-top: 60px;
+}
+
+.left-list .list-item .links {
+  margin-top: 12px;
+}
+
+.left-list .list-item .links .left-item {
+  float: left;
+  margin-right: 10px;
+}
+
+.left-list .list-item .links .right-item {
+  float: right;
+}
+
+.left-list .list-item .links .left-item a {
+  color: #000;
+}
+
+.read-article {
+  width: 124px;
+  height: 22px;
+  background: #202020;
+  text-align: center;
+  line-height: 22px;
+  color: #fff;  
+}
+
+.read-article input {
+  width: 124px;
+  height: 22px;
+  background: #202020;
+  color: #fff;  
+}
+
+.read-article input:hover {
+  cursor: pointer;
+}
+
+.right-list .list-canvas {
+  position: relative;
+  height: 80px;
+  width: 280px;
+  margin-top: 20px;
+  box-shadow: 0 0 0 5px #1e1e1e, 0 0 0 10px #de2323;
+  border-radius: 10px;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  height: 90px;
+  width: 100%;
+  text-align: center;
+  background: -webkit-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Safari 5.1 - 6.0 */
+  background: -o-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Opera 11.6 - 12.0 */
+  background: -moz-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Firefox 3.6 - 15 */
+  background: radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* 标准的语法（必须放在最后） */
+}
+
+footer ul.share-group {
+  display: block;
+  width: 1080px;
+  margin: 0 auto;
+  line-height: 60px;
+}
+
+.share-group li {
+  display: inline-block;
+}
+
+.share-group li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+
+.redactor_toolbar {
+  display: none;
+}
+
+.redactor_editor {
+  height: 100px;
+  background: #e0e0e0 !important;
+  width: 100%;
+  overflow: hidden;
+  padding: 2px !important;
+}

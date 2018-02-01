@@ -1,0 +1,22 @@
+{
+  "name": "myblog",
+  "description": "",
+  "main": "www",
+  "authors": [
+    "SherryHolmes <haorui5@163.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/SherryHolmes/myblog",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "redactor": "*"
+  }
+}

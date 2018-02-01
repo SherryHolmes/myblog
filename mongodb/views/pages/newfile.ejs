@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <title>发表文章</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <!-- redactor需要jquery的1.9.0版本支持 -->
+  <script src="/js/jquery-1.9.0.min.js"></script>
+  <link rel="stylesheet" href="/libs/redactor/redactor/redactor.css" />
+  <script src="/libs/redactor/redactor/redactor.min.js"></script>
+  <script src="/js/article.js"></script>
+  <script type="text/javascript">
+    $(document).ready(
+      function () {
+        $('#article-content').redactor();
+      }
+    );
+  </script>
+
+  <style>
+
+    .newfile-page {
+      width: 940px;
+      margin: 50px auto;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="newfile-page">
+    <form method="post", action="/article", enctype="multipart/form-data">
+      <label for="#article-title">Title:</label><br>
+      <input id="article-title" type="text" name="title" value=<% article.title %> ><br><br>
+      <label for="#article-content">Content:</label><br>
+      <textarea id="article-content" name="content" value=<% article.title %> ></textarea>
+      <br><br>
+      <input type="submit" class="message" value="发表">
+    </form>
+  </div>
+</body>
+
+</html>
