@@ -11,7 +11,7 @@
 <body>
   <div class="index-header">
     <div class="head-nav">
-      <div class="nav-title">Sherry<span>H</span>olmes</div>
+      <div class="header-logo">Sherry<span>H</span>olmes</div>
       <% if(user) {%>
       <div class="nav-login">
         <div class="login-item user-name">
@@ -20,17 +20,15 @@
         <div class="login-item"><a href="/logout">Logout</a></div>
       </div>
       <% } else {%>
-        <div class="nav-login">
-          <a href="/login">Login<span> | </span>Logup</a>
-        </div>
-      <% } %>
-      <ul class="nav-menu">
-        <li class="item active"><a href="/">HOME</a></li>
-        <li class="item"><a href="/blog" target="_blank">ARTICLES</a></li>
-        <li class="item"><a href="#about-me">ABOUTME</a></li>
-        <li class="item"><a href="#contact-me">CONTACT</a></li>
-        <li class="item"><a href="#leave-word">MESSAGES</a></li>
-        <li class="item"><a href="/test">MYTEST</a></li>
+    <div class="nav-login">
+      <a href="/login">Login<span> | </span>Logup</a>
+    </div>
+    <% } %>
+      <ul class="header-menu">
+        <li class="item active"><a href="/">Home</a></li>
+        <li class="item"><a href="/blog">Articles</a></li>
+        <li class="item"><a href="#about-me">AboutMe</a></li>
+        <li class="item"><a href="#contact-me">Contact</a></li>
       </ul>
     </div>
     <div class="head-banner">
@@ -39,54 +37,6 @@
         <div class="text2">I’M LOOKING FOR THINGS I’VE NEVER SEEN BEFORE.”</div>
       </div>
     </div>
-  </div>
-  <div class="index-func">
-    <div class="func-title">FUNCTIONS
-      <div class="line"></div>
-    </div>
-    <ul class="func-panel">
-      <li class="item">
-        <img src="/images/icon1.gif" alt="">
-        <h4>FUN</h4>
-        <p>Apple pie icing sweet. Brownie jelly-o applicake applicake sweet roll liquorice bear claw. Jujubes carrot cake cotton candy sweet tart brownie. Tiramisu applicake jujubes.</p>
-      </li>
-      <li class="item">
-        <img src="/images/icon2.gif" alt="">
-        <h4>ARTICLE</h4>
-        <p>Apple pie icing sweet. Brownie jelly-o applicake applicake sweet roll liquorice bear claw. Jujubes carrot cake cotton candy sweet tart brownie. Tiramisu applicake jujubes.</p>
-      </li>
-      <li class="item">
-        <img src="/images/icon3.gif" alt="">
-        <h4>ABOUTS</h4>
-        <p>Apple pie icing sweet. Brownie jelly-o applicake applicake sweet roll liquorice bear claw. Jujubes carrot cake cotton candy sweet tart brownie. Tiramisu applicake jujubes.</p>
-      </li>
-      <li class="item">
-        <img src="/images/icon4.gif" alt="">
-        <h4>LINKS</h4>
-        <p>Apple pie icing sweet. Brownie jelly-o applicake applicake sweet roll liquorice bear claw. Jujubes carrot cake cotton candy sweet tart brownie. Tiramisu applicake jujubes.</p>
-      </li>
-    </ul>
-  </div>
-  <div class="index-funny">
-    <div class="funny-title">FUNNY PAGES</div>
-    <ul class="funny-panel">
-      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
-      </li>
-      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
-      </li>
-      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
-      </li>
-      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
-      </li>
-      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
-      </li>
-      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
-      </li>
-      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
-      </li>
-      <li class="item"><a href=""><img src="/images/panel1.jpg" alt=""></a>
-      </li>
-    </ul>
   </div>
   <div class="index-feature">
     <div class="feature-content">
@@ -98,25 +48,15 @@
       pie applicake. Croissant chocolate cake I love pudding. Ice cream I love powder pudding apple pie marshmallow. Cupcake
       marzipan oat cake bonbon I love candy canes toffee</p>
       <div class="article-btn">
-        <a href="">CLICK ME</a> 
+        <a href="/blog">CLICK ME</a> 
       </div>
     </div>
     <div class="feature-img">
       <img src="/images/article.jpg" alt="">
     </div>
   </div>
-  <div class="index-contact" id="contact-me">
-    <div class="contact-me">CONTACT ME</div>
-    <div class="contact-icon">
-      <a target="_blank" href="https://passport.weibo.com" class="icon-sina-weibo">
-        <i class="fa fa-weibo fa-fw"></i>
-      </a>
-    </div>
-    <p>I love programming.If you are interested, please contact me.Let's explore and learn from each other.</br>
-     QQ:896907062<br>e-mail:haorui5@163.com</p>
-  </div>
-  <div class="index-aboutme">
-    <ul class="about-me" id="about-me">
+  <div class="index-aboutme" id="about-me">
+    <ul class="about-me">
       <li class="item">
         <div class="title">Who Is Sherry Holmes?</div>
         <div class="content">
@@ -167,6 +107,16 @@
       soufflé sweet roll sweet roll jelly-o.</p>
     <h5>Sherry Holmes</h5>
   </div>
+  <div class="index-contact" id="contact-me">
+    <div class="contact-me">CONTACT ME</div>
+    <div class="contact-icon">
+      <a target="_blank" href="https://passport.weibo.com" class="icon-sina-weibo">
+        <i class="fa fa-weibo fa-fw"></i>
+      </a>
+    </div>
+    <p>I love programming.If you are interested, please contact me.Let's explore and learn from each other.</br>
+      QQ:896907062<br>e-mail:haorui5@163.com</p>
+  </div>
   <div class="index-leave-words" id="leave-word">
     <div class="message-title">LEAVE WORDS</div>
     <form class="leave-words" action="">
@@ -192,9 +142,9 @@
   <div class="index-footer">
     <ul class="footer-menu">
       <li class="item"><a href="">HOME<span>|</span></a></li>
-      <li class="item"><a href="">FUNCTIONS<span>|</span></a></li>
-      <li class="item"><a href="">FUNNY<span>|</span></a></li>
-      <li class="item"><a href="">FEATURES<span>|</span></a></li>
+      <li class="item"><a href="">ARTICLE<span>|</span></a></li>
+      <li class="item"><a href="">CONTACT<span>|</span></a></li>
+      <li class="item"><a href="">ABOUT<span>|</span></a></li>
       <li class="item"><a href="">MYTEST<span>|</span></a></li>
       <li class="last">2018 SherryHolmes</li>
     </ul>

@@ -37,15 +37,80 @@ img {
   position: relative;
   width: 100%;
   height: 800px;
-  background: url("../images/head-bg.jpg") no-repeat; }
+  background: url("../images/banner.jpg") no-repeat; }
 
 .index-header .head-nav {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 150px;
-  background: rgba(57, 68, 75, 0.8); 
+  height: 60px;
+  z-index: 200;
+  background: -webkit-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Safari 5.1 - 6.0 */
+  background: -o-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Opera 11.6 - 12.0 */
+  background: -moz-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Firefox 3.6 - 15 */
+  background: radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* 标准的语法（必须放在最后） */
+}
+
+.index-header .head-nav .header-logo {
+  float: left;
+  margin-left: 160px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 550;
+  line-height: 60px;
+  font-style: italic;
+}
+
+.index-header .head-nav .header-logo > span {
+  color: #de2323;
+}
+
+.index-header .head-nav .header-menu {
+  float: right;
+  margin-right: 150px;
+}
+
+.index-header .head-nav .header-menu .item{
+  float: left;
+  margin-right: 12px;
+  width: 120px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  outline: 0;
+  padding: 5px 12px;
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  font-style: italic;
+  text-shadow: 1px 1px #1f272b;
+  border: 1px solid #1c252b;
+  border-bottom-left-radius: 8px;
+  -moz-border-bottom-left-radius: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  -moz-border-bottom-right-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  background: #1e1e1e; /* old browsers */
+  background: -moz-linear-gradient(top, #3D4850 3%, #313d45 4%, #1e1e1e 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(3%,#3D4850), color-stop(4%,#313d45), color-stop(100%,#1e1e1e)); /* webkit */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D4850', endColorstr='#1e1e1e',GradientType=0 ); /* ie */
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* CSS3 */
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Firefox */
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Safari, Chrome */  
+}
+
+.index-header .head-nav .header-menu .item a {
+  color: #f7f7f7;
+}
+
+.index-header .head-nav .header-menu .item:hover {
+  background: #eb5252;
+}
+
+.index-header .head-nav .header-menu .active {
+  background: #de2323;
 }
 
 .nav-title {
@@ -58,7 +123,7 @@ img {
   color: #fff; }
 
 .nav-title span {
-  color: #4bcaff; }
+  color: #eb5252; }
 
 .nav-menu {
   display: block;
@@ -81,7 +146,7 @@ img {
   font-family: "Segoe UI";
   font-weight: 700;
   color: #fff; 
-  margin-top: 56px; 
+  line-height: 60px; 
 }
 
 .nav-login .user-name span {
@@ -89,11 +154,11 @@ img {
 }
 
 .nav-login .user-name {
-  color: #4bcaff;
+  color: #eb5252;
 }
 
 .nav-login a:hover {
-  color: #4bcaff;
+  color: #eb5252;
   text-decoration: underline;
 }
 
@@ -112,11 +177,11 @@ img {
 }
 
 .nav-menu .last a span {
-  color: #4bcaff;
+  color: #eb5252;
 }
 
 .nav-menu .last a:hover {
-  border: 2px solid #4bcaff;
+  border: 2px solid #eb5252;
 }
 
 
@@ -127,17 +192,17 @@ img {
   font-weight: 700; }
 
 .nav-menu .item:hover a {
-  color: #4bcaff; }
+  color: #eb5252; }
 
 .nav-menu .active {
-  border: 2px solid #4bcaff; }
+  border: 2px solid #eb5252; }
 
 .nav-menu .active a {
-  color: #4bcaff; }
+  color: #eb5252; }
 
 .index-header .head-banner {
   position: absolute;
-  top: 150px;
+  top: 120px;
   left: 0;
   width: 100%;
   height: 650px;
@@ -160,23 +225,7 @@ img {
   width: 990px;
   background: #4b565e; }
 
-.index-func {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  background: #4bcaff; }
 
-.index-func .func-title {
-  position: absolute;
-  top: 76px;
-  left: 150px;
-  font-size: 30px;
-  font-weight: 300;
-  color: #fff;
-  text-decoration: underline;
-  letter-spacing: 1px; }
-
-.index-func .func-panel,
 .index-funny .funny-panel {
   position: absolute;
   top: 150px;
@@ -185,21 +234,11 @@ img {
   width: 1200px;
   margin-left: -600px; }
 
-.index-func .func-panel .item,
+
 .index-funny .funny-panel .item {
   float: left;
   width: 300px;
   height: 260px; }
-
-.index-func .func-panel .item h4 {
-  margin-top: 20px;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 600; }
-
-.index-func .func-panel .item p {
-  font-size: 12px;
-  color: #fff; }
 
 .index-funny {
   position: relative;
@@ -212,7 +251,7 @@ img {
   left: 150px;
   font-size: 30px;
   font-weight: 300;
-  color: #515f67;
+  color: #de2323;
   text-decoration: underline;
   letter-spacing: 1px; }
 
@@ -223,7 +262,7 @@ img {
   position: relative;
   width: 100%;
   height: 460px;
-  background: #515f67; }
+  background: #eb5252; }
 
 .feature-content {
   float: left;
@@ -271,7 +310,7 @@ img {
   position: relative;
   width: 100%;
   height: 360px;
-  background: #4bcaff; }
+  background: #eb5252; }
 
 .index-contact .contact-icon,
 .index-contact .contact-me {
@@ -358,7 +397,7 @@ img {
 .testimonials-title,
 .testimonials-icon {
   font-size: 30px;
-  color: #515f67; }
+  color: #de2323; }
 
 .index-testimonials p {
   display: block;
@@ -367,7 +406,7 @@ img {
   left: 150px;
   width: 1160px;
   font-size: 28px;
-  color: #515f67;
+  color: #de2323;
   font-weight: 300;
   line-height: 50px; }
 
@@ -376,7 +415,7 @@ img {
   position: absolute;
   bottom: 50px;
   left: 150px;
-  color: #4bcaff;
+  color: #eb5252;
   font-size: 14px; }
 
 .index-leave-words {
@@ -423,7 +462,7 @@ img {
 .index-leave-words .leave-words .message {
   width: 370px;
   height: 62px;
-  background: #4bcaff;
+  background: #eb5252;
   border: none; }
 
 .index-leave-words .leave-words .text {
@@ -443,20 +482,24 @@ img {
 .index-footer {
   position: relative;
   width: 100%;
-  height: 170px;
-  background: #353f47; }
+  height: 70px;
+  background: -webkit-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Safari 5.1 - 6.0 */
+  background: -o-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Opera 11.6 - 12.0 */
+  background: -moz-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Firefox 3.6 - 15 */
+  background: radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* 标准的语法（必须放在最后） */
+}
 
 .index-footer .footer-menu {
   position: relative;
   margin-left: 150px;
-  line-height: 170px; }
+  line-height: 70px; }
 
 .index-footer .footer-menu .item {
   float: left;
   margin-right: 16px; }
 
 .index-footer .footer-menu .item a {
-  color: #515f67;
+  color: #fff;
   font-size: 12px;
   font-weight: 600; }
 
@@ -466,7 +509,7 @@ img {
 .index-footer .footer-menu .last {
   float: right;
   margin-right: 150px;
-  color: #515f67;
+  color: #fff;
   font-size: 12px;
   font-weight: 600; }
 
