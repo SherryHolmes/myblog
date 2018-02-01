@@ -55,7 +55,8 @@
         </div>
       </div>
       <ul class="left-list">
-        <% for (var i=0; i<articles.length; i++) { %>
+        <% if(articles) { %>
+          <% for (var i=0; i<articles.length; i++) { %>
           <li class="list-item">
             <div class="title">
               <%= articles[i].title %>
@@ -75,7 +76,7 @@
             </ul>
             <div class="border"></div>
           </li>
-        <% } %>
+        <% } }%>
       </ul>
     </div>
     <div class="panel-right clearfloat">
