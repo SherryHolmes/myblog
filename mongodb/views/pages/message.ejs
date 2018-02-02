@@ -48,13 +48,14 @@
               <li class="name">
                 <%= messages[i].name %>
               </li>
-              <li class="floor">第
-                <%=i+1 %>楼</li>
+              <li class="floor">第<%=i+1 %>楼</li>
             </ul>
+            <br>
             <div class="message-content">
               <%= messages[i].content %>
             </div>
           </div>
+          <div class="clock"><%=moment(messages[i].meta.updateAt).format('YYYY/DD/MM h:mm:ss a') %></div>
           <div class="line"></div>
         <% } }%>
       </div>

@@ -11,7 +11,7 @@ var multipart = require('connect-multiparty');
 var logger = require('morgan');
 var serveStatic = require('serve-static');
 var app = express();
-
+app.locals.moment = require('moment');
 /** mongoose */
 var dbUrl = 'mongodb://localhost/db';
 mongoose.Promise = global.Promise;

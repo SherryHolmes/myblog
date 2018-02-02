@@ -23,76 +23,23 @@
 }
 
 .left-message .message-text {
+  position: relative;
   width: 100%;
-  height: 200px;
+  height: 160px;
 }
 
-
-.left-list .list-item {
-  height: 200px;
-  // border: 1px solid #000;
-  margin-bottom: 100px;
+.message-text > ul {
+  position: relative;
   margin-top: 20px;
 }
 
-.left-list .list-item .title {
-  font-size: 24px;
-  font-weight: 400;
-  color: #000;
-}
-
-.left-list .list-item .title .sub-title {
-  color: #636363;
-  font-size: 12px;
-  margin-top: 6px;
-}
-
-.left-list .list-item .content {
-  // height: 230px;
-  background: #e0e0e0;
-  margin-top: 20px;
-}
-
-.left-list .list-item > p {
-  color: #2f2f2f;
-  font-size: 14px;
-  margin-top: 12px;
-}
-
-.left-list .list-item .border {
-  height: 2px;
-  background: #B3ADAD;
-  margin-top: 60px;
-}
-
-.left-list .list-item .links {
-  margin-top: 12px;
-}
-
-.left-list .list-item .links .left-item {
-  float: left;
-  margin-right: 10px;
-}
-
-.left-list .list-item .links .right-item {
-  float: right;
-}
-
-.left-list .list-item .links .left-item a {
-  color: #000;
-}
-
-.left-message .list-item {
-  margin: 0;
-}
-
-.left-message .list-item> ul .name,
-.left-message .list-item> ul .floor{
+.message-text > ul li {
   float: left;
   margin-right: 20px;
 }
 
-
-.left-message .list-item .content {
-  background: transparent;
+.message-text .message-content {
+  margin-top: 40px;
+  margin-left: 20px;
+  font-weight: 700;
 }
