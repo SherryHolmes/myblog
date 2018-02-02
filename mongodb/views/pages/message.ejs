@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/message.css">
+  <script src="/js/digit.js"></script>
+  <script src="/js/countdown.js"></script>
+  <title>SherryHolmes文章</title>
+</head>
+<body>
+  <div class="public-header">
+    <div class="header-logo">Sherry<span>H</span>olmes</div>
+    <% if(user) {%>
+      <div class="nav-login">
+        <div class="login-item user-name">
+          <%=user.name %><span> | </span>
+        </div>
+        <div class="login-item"><a href="/logout">Logout</a></div>
+      </div>
+      <% } else {%>
+        <div class="nav-login">
+          <a href="/login">Login<span> | </span>Logup</a>
+        </div>
+        <% } %>
+      <ul class="header-menu">
+        <li class="item"><a href="/">Home</a></li>
+        <li class="item"><a href="/blog">Articles</a></li>
+        <li class="item active"><a href="/article/message">Messages</a></li>
+        <li class="item"><a href="">Contact</a></li>
+      </ul>
+  </div>
+  <div class="blog-panel">
+    <div class="panel-left clearfloat">
+      <div class="blog-title">
+        <%=title %>
+      </div>
+      <div class="line"></div>
+      <div class="left-message">
+        <p>留言(<%=messages.length%>)</p>
+        <div class="line"></div>
+        <% if(messages) { %>
+          <% for (var i=0; i<messages.length; i++) { %>
+          <div class="message-text">
+            <ul>
+              <li class="name">
+                <%= messages[i].name %>
+              </li>
+              <li class="floor">第
+                <%=i+1 %>楼</li>
+            </ul>
+            <div class="message-content">
+              <%= messages[i].content %>
+            </div>
+          </div>
+          <div class="line"></div>
+        <% } }%>
+      </div>
+    </div>
+    <div class="panel-right clearfloat">
+      <a href="/article/new" class="new-file">
+        <i class="fa fa-plus fa-fw"></i>
+        写留言
+      </a>
+      <ul class="right-list">
+        <li class="list-item list-canvas">
+          <canvas id="canvas-clock">
+            当前浏览器不支持Canvas，请更换浏览器后再试
+          </canvas>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <footer id="footer-link">
+    <ul class="share-group">
+      <li>
+        <a target="_blank" href="http://github.com/" class="icon-github">
+          <i class="fa fa-github fa-fw"></i>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="http://google.com" class="icon-google-plus3">
+          <i class="fa fa-google fa-fw"></i>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://passport.weibo.com" class="icon-sina-weibo">
+          <i class="fa fa-weibo fa-fw"></i>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="http://ihaorui.me/" class="icon-comment">
+          <i class="fa fa-home fa-fw"></i>
+        </a>
+      </li>
+    </ul>
+    <div class="copy">
+      &copy SherryHolmes - 2017
+    </div>
+  </footer>
+</body>
+
+</html>

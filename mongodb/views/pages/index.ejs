@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%=title %></title>
   <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/test.css">
+  <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
   <div class="index-header">
@@ -27,8 +27,8 @@
       <ul class="header-menu">
         <li class="item active"><a href="/">Home</a></li>
         <li class="item"><a href="/blog">Articles</a></li>
-        <li class="item"><a href="#about-me">AboutMe</a></li>
-        <li class="item"><a href="#contact-me">Contact</a></li>
+        <li class="item"><a href="/article/message">Messages</a></li>
+        <li class="item"><a href="">Contact</a></li>
       </ul>
     </div>
     <div class="head-banner">
@@ -101,8 +101,7 @@
     <div class="testimonials-icon">
       <i class="fa fa-heart fa-fw"></i>
     </div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odio laudantium in et ipsam 
-    dolor tenetur ullam quasi aut ea inventore porro, veniam repellendus impedit suscipit.</p>
+    <p>我是一个程序员，喜欢编程</p>
     <h5>Sherry Holmes</h5>
   </div>
   <div class="index-contact" id="contact-me">
@@ -117,24 +116,24 @@
   </div>
   <div class="index-leave-words" id="leave-word">
     <div class="message-title">LEAVE WORDS</div>
-    <form class="leave-words" action="">
-      Full name:<br>
-      <input type="text" name="fullname" >
-      <br>Email:<br>
-      <input type="text" name="email">
-      <br> Message:<br>
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-      <br><br>
-      <input type="submit" class="message" value="MESSAGE">
-      <div class="text">
-        <ul>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odio laudantium in et ipsam maxime quae accusantium voluptatum dolor tenetur ullam quasi aut ea inventore porro, veniam repellendus impedit suscipit.</li>
-          <li>QQ:896907062</li>
-          <li>e-mail: haorui5@163.com</li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
+    <div class="message-text">
+      <ul>
+        <li>如果你有什么意见或建议；如果你也对编程感兴趣；如果你喜欢我的博客；如果你发现我的博客有什么问题，都欢迎你这给我留言。</li>
+        <li>或者通过以下方式联系我：</li>
+        <li>QQ:896907062</li>
+        <li>e-mail: haorui5@163.com</li>
+        <li>谢谢！</li>
+      </ul>
+    </div>
+    <form method="post" action="/message" enctype="multipart/form-data">
+      <% if(user) {%>
+      <input type="hidden" name="name" value=<%=user.name %> >
+      <% } %>
+      <label for="#message-textarea">留言 Message</label>
+      <br>
+      <textarea type="text" name="content" id="message-textarea"></textarea>
+      <input type="submit" class="message-submit" value="MESSAGE">
+      <a href="/article/message" class="message-board">去留言板 go to message board</a>
     </form>
   </div>
   <div class="index-footer">

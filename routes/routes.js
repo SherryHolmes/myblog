@@ -1,6 +1,7 @@
 var Index = require('../mongodb/controllers/index');
 var Article = require('../mongodb/controllers/article');
 var User = require('../mongodb/controllers/user');
+var Message = require('../mongodb/controllers/message');
 
 module.exports = function (app) {
   // pre handle user 预处理
@@ -33,5 +34,9 @@ module.exports = function (app) {
   app.get('/logout', User.logout);
   app.get('/sign/logout', User.signlogout);
   app.get('/admin/user/list', User.loginRequired, User.adminRequired, User.list);
+
+  // Message
+  app.post('/message', User.loginRequired, Message.save);
+  app.get('/article/message', Message.message);
 
 };

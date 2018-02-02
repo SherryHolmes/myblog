@@ -17,7 +17,9 @@ var UserSchema = new mongoose.Schema({
 	role: {
 		type:Number,
 		default: 0
-		},
+	},
+	sex: String,
+	born: String,
 	meta: {						//创建网页的时间记录
 		createAt: {
 			type: Date,

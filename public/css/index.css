@@ -7,7 +7,7 @@ h3, h4, h5, h6, input, form, a, p, textarea {
   font-family: "Segoe UI", "Adobe Fan Heiti Std B", Arial, sans-serif; }
 
 body {
-  background: #fff;
+  background: #efefef;
   overflow-x: hidden; }
 
 ol, ul, li {
@@ -46,11 +46,14 @@ img {
   width: 100%;
   height: 60px;
   z-index: 200;
-  background: -webkit-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Safari 5.1 - 6.0 */
-  background: -o-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Opera 11.6 - 12.0 */
-  background: -moz-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Firefox 3.6 - 15 */
-  background: radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* 标准的语法（必须放在最后） */
-}
+  background: -webkit-radial-gradient(#212121, #393939, #212121);
+  /* Safari 5.1 - 6.0 */
+  background: -o-radial-gradient(#212121, #393939, #212121);
+  /* Opera 11.6 - 12.0 */
+  background: -moz-radial-gradient(#212121, #393939, #212121);
+  /* Firefox 3.6 - 15 */
+  background: radial-gradient(#212121, #393939, #212121);
+  /* 标准的语法（必须放在最后） */ }
 
 .index-header .head-nav .header-logo {
   float: left;
@@ -59,19 +62,16 @@ img {
   font-size: 30px;
   font-weight: 550;
   line-height: 60px;
-  font-style: italic;
-}
+  font-style: italic; }
 
 .index-header .head-nav .header-logo > span {
-  color: #de2323;
-}
+  color: #de2323; }
 
 .index-header .head-nav .header-menu {
   float: right;
-  margin-right: 150px;
-}
+  margin-right: 150px; }
 
-.index-header .head-nav .header-menu .item{
+.index-header .head-nav .header-menu .item {
   float: left;
   margin-right: 12px;
   width: 120px;
@@ -92,26 +92,29 @@ img {
   border-bottom-right-radius: 8px;
   -moz-border-bottom-right-radius: 8px;
   -webkit-border-bottom-right-radius: 8px;
-  background: #1e1e1e; /* old browsers */
-  background: -moz-linear-gradient(top, #3D4850 3%, #313d45 4%, #1e1e1e 100%); /* firefox */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(3%,#3D4850), color-stop(4%,#313d45), color-stop(100%,#1e1e1e)); /* webkit */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D4850', endColorstr='#1e1e1e',GradientType=0 ); /* ie */
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* CSS3 */
-  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Firefox */
-  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Safari, Chrome */  
-}
+  background: #1e1e1e;
+  /* old browsers */
+  background: -moz-linear-gradient(top, #3D4850 3%, #313d45 4%, #1e1e1e 100%);
+  /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #3D4850), color-stop(4%, #313d45), color-stop(100%, #1e1e1e));
+  /* webkit */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D4850', endColorstr='#1e1e1e',GradientType=0 );
+  /* ie */
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  /* CSS3 */
+  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  /* Firefox */
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  /* Safari, Chrome */ }
 
 .index-header .head-nav .header-menu .item a {
-  color: #f7f7f7;
-}
+  color: #f7f7f7; }
 
 .index-header .head-nav .header-menu .item:hover {
-  background: #eb5252;
-}
+  background: #eb5252; }
 
 .index-header .head-nav .header-menu .active {
-  background: #de2323;
-}
+  background: #de2323; }
 
 .nav-title {
   float: left;
@@ -129,8 +132,7 @@ img {
   display: block;
   float: right;
   margin-right: 100px;
-  margin-top: 56px; 
-}
+  margin-top: 56px; }
 
 .nav-menu .item {
   float: left;
@@ -145,45 +147,35 @@ img {
   margin-right: 50px;
   font-family: "Segoe UI";
   font-weight: 700;
-  color: #fff; 
-  line-height: 60px; 
-}
+  color: #fff;
+  line-height: 60px; }
 
 .nav-login .user-name span {
-  color: #fff;
-}
+  color: #fff; }
 
 .nav-login .user-name {
-  color: #eb5252;
-}
+  color: #eb5252; }
 
 .nav-login a:hover {
   color: #eb5252;
-  text-decoration: underline;
-}
+  text-decoration: underline; }
 
 .nav-login .login-item {
-  float: left;
-}
+  float: left; }
 
 .nav-menu .last a {
   width: 120px;
   height: 32px;
-  background: #353f46;
-}
+  background: #353f46; }
 
-.nav-menu .last >.login-item {
-  float: left;
-}
+.nav-menu .last > .login-item {
+  float: left; }
 
 .nav-menu .last a span {
-  color: #eb5252;
-}
+  color: #eb5252; }
 
 .nav-menu .last a:hover {
-  border: 2px solid #eb5252;
-}
-
+  border: 2px solid #eb5252; }
 
 .nav-menu .item a {
   position: relative;
@@ -225,7 +217,6 @@ img {
   width: 990px;
   background: #4b565e; }
 
-
 .index-funny .funny-panel {
   position: absolute;
   top: 150px;
@@ -233,7 +224,6 @@ img {
   height: 262px;
   width: 1200px;
   margin-left: -600px; }
-
 
 .index-funny .funny-panel .item {
   float: left;
@@ -293,8 +283,9 @@ img {
 
 .article-btn:hover {
   border: 2px solid #fff; }
-  .article-btn:hover a {
-    color: #fff; }
+
+.article-btn:hover a {
+  color: #fff; }
 
 .article-btn a {
   color: #353f46;
@@ -306,10 +297,9 @@ img {
   margin-top: 30px;
   margin-right: 250px; }
 
-.feature-img img{
+.feature-img img {
   height: 400px;
-  width: auto; 
-}
+  width: auto; }
 
 .index-contact {
   position: relative;
@@ -438,15 +428,15 @@ img {
   font-weight: 300;
   text-decoration: underline; }
 
-.index-leave-words .leave-words {
+.index-leave-words form {
   position: absolute;
-  top: 150px;
+  top: 350px;
   left: 150px;
   font-size: 14px;
   color: #fff;
   font-weight: 700; }
 
-.index-leave-words .leave-words input {
+.index-leave-words form input {
   width: 470px;
   height: 50px;
   margin-bottom: 20px;
@@ -456,43 +446,67 @@ img {
   font-size: 14px;
   font-weight: 700; }
 
-.index-leave-words .leave-words textarea {
+.index-leave-words form textarea {
   width: 1180px;
   height: 220px;
   background: transparent;
   border: 2px solid #fff;
   color: #fff;
-  font-size: 16px; }
+  font-size: 16px;
+  outline: none; }
 
-.index-leave-words .leave-words .message {
+.index-leave-words form textarea:hover,
+.index-leave-words form textarea:focus {
+  border: 2px solid #eb5252; }
+
+.index-leave-words form .message-submit {
+  float: left;
   width: 370px;
   height: 62px;
   background: #eb5252;
-  border: none; }
+  border: none;
+  margin-top: 30px; }
 
-.index-leave-words .leave-words .text {
+.index-leave-words form .message-submit:hover {
+  background: #de2323;
+  cursor: pointer; }
+
+.index-leave-words form a {
+  float: right;
+  margin-top: 70px;
+  margin-right: 190px; }
+
+.index-leave-words form a:hover {
+  text-decoration: underline;
+  color: #de2323; }
+
+.index-leave-words .message-text {
   display: block;
   position: absolute;
-  top: 10px;
-  left: 600px;
+  top: 120px;
+  left: 150px;
   width: 570px;
-  height: 200px; }
+  height: 200px;
+  color: #fff; }
 
-.index-leave-words .leave-words .text li:first-child {
+.index-leave-words .message-text li:first-child {
   margin-bottom: 30px; }
 
-.index-leave-words .leave-words .text li {
+.index-leave-words .message-text li {
   margin-bottom: 5px; }
 
 .index-footer {
   position: relative;
   width: 100%;
   height: 70px;
-  background: -webkit-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Safari 5.1 - 6.0 */
-  background: -o-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Opera 11.6 - 12.0 */
-  background: -moz-radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* Firefox 3.6 - 15 */
-  background: radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* 标准的语法（必须放在最后） */
-}
+  background: -webkit-radial-gradient(#212121, #393939, #212121);
+  /* Safari 5.1 - 6.0 */
+  background: -o-radial-gradient(#212121, #393939, #212121);
+  /* Opera 11.6 - 12.0 */
+  background: -moz-radial-gradient(#212121, #393939, #212121);
+  /* Firefox 3.6 - 15 */
+  background: radial-gradient(#212121, #393939, #212121);
+  /* 标准的语法（必须放在最后） */ }
 
 .index-footer .footer-menu {
   position: relative;
@@ -517,5 +531,7 @@ img {
   color: #fff;
   font-size: 12px;
   font-weight: 600; }
+
+/*# sourceMappingURL=index.css.map */
 
 /*# sourceMappingURL=index.css.map */
