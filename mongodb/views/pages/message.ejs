@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="/js/jquery-1.9.0.min.js"></script>
   <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/message.css">
+  <link rel="stylesheet" href="/css/calendar.css">
+  <script src="/js/calendar.js"></script>
   <script src="/js/digit.js"></script>
   <script src="/js/countdown.js"></script>
+  <link rel="stylesheet" href="/css/message.css">
   <title>SherryHolmes文章</title>
 </head>
 <body>
@@ -70,6 +73,26 @@
           <canvas id="canvas-clock">
             当前浏览器不支持Canvas，请更换浏览器后再试
           </canvas>
+        </li>
+        <li class="list-item Calendar">
+          <div id="idCalendarPre"><<</div>
+          <div id="idCalendarNext">>></div>
+          <span id="idCalendarYear">2008</span>年 <span id="idCalendarMonth">8</span>月
+          <table cellspacing="0">
+            <thead>
+              <tr>
+                <td>日</td>
+                <td>一</td>
+                <td>二</td>
+                <td>三</td>
+                <td>四</td>
+                <td>五</td>
+                <td>六</td>
+              </tr>
+            </thead>
+            <tbody id="idCalendar">
+            </tbody>
+          </table>
         </li>
       </ul>
     </div>

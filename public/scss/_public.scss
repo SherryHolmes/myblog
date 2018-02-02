@@ -133,7 +133,7 @@
 }
 
 .right-list .list-canvas {
-  position: relative;
+  position: relative; 
   height: 80px;
   width: 280px;
   margin-top: 20px;
@@ -141,6 +141,12 @@
   border-radius: 10px;
 }
 
+.right-list .Calendar {
+  position: relative;
+  margin-top: 60px;
+  background: #e0e0e0;
+} 
+ 
 footer {
   position: fixed;
   bottom: 0;

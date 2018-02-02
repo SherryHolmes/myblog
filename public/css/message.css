@@ -169,6 +169,11 @@ img {
   box-shadow: 0 0 0 5px #1e1e1e, 0 0 0 10px #de2323;
   border-radius: 10px; }
 
+.right-list .Calendar {
+  position: relative;
+  margin-top: 60px;
+  background: #e0e0e0; }
+
 footer {
   position: fixed;
   bottom: 0;
