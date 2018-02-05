@@ -36,6 +36,16 @@
       </ul>
   </div>
   <div class="blog-panel">
+    <form method="post" action="/message" enctype="multipart/form-data">
+      <% if(user) {%>
+        <input type="hidden" name="name" value=<%=user.name %> >
+        <% } %>
+          <label for="#message-textarea">写留言</label>
+          <br>
+          <textarea type="text" name="content" id="message-textarea"></textarea>
+          <br>
+          <input type="submit" class="message-submit" value="提交">
+    </form>
     <div class="panel-left clearfloat">
       <div class="blog-title">
         <%=title %>
@@ -58,10 +68,16 @@
               <%= messages[i].content %>
             </div>
           </div>
-          <div class="clock"><%=moment(messages[i].meta.updateAt).format('YYYY/DD/MM h:mm:ss a') %></div>
+          <ul class="control">
+            <li class="control-item"><a href="#">点赞</a></li>
+            <li class="control-item"><a href="#">回复</a></li>
+            <!-- <li class="control-item"></li> -->
+          </ul>
+          <div class="clock"><%=moment(messages[i].meta.updateAt).format('YYYY/MM/DD h:mm:ss a') %></div>
           <div class="line"></div>
         <% } }%>
       </div>
+      
     </div>
     <div class="panel-right clearfloat">
       <a href="#" class="new-file">
@@ -124,6 +140,16 @@
       &copy SherryHolmes - 2017
     </div>
   </footer>
+
+  <script>
+    $(".new-file").on("click", function () {
+      $('.blog-panel>form').css("display", "block");
+    })
+
+    $(".message-submit").on("click", function () {
+      $('.blog-panel>form').css("display", "none");
+    })
+  </script>
 </body>
 
 </html>

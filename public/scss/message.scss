@@ -17,6 +17,7 @@
 }
 
 .left-message .line {
+  position: relative;
   height: 2px;
   background: #B3ADAD;
   margin-bottom: 30px;
@@ -42,4 +43,52 @@
   margin-top: 40px;
   margin-left: 20px;
   font-weight: 700;
+}
+
+.left-message .clock {
+  position: relative;
+  float: right;
+  height: 20px;
+  margin-top: -24px;
+}
+
+.left-message .control {
+  position: relative;
+  height: 20px;
+  float: left;
+  margin-top: -24px;
+}
+
+.left-message .control .control-item {
+  float: left;
+  margin-right: 10px;
+}
+
+.blog-panel form{
+  display: none;
+  font-size: 14px;
+  color: #000;
+  font-weight: 700; 
+}
+ 
+
+.blog-panel form input {
+  width: 300px;
+  height: 50px;
+  margin-bottom: 20px;
+  border: 2px solid #B3ADAD;
+  background: transparent;
+  color: #5E5858;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.blog-panel form textarea {
+  width: 800px;
+  height: 100px;
+  background: transparent;
+  border: 2px solid #B3ADAD;
+  color: #000;
+  font-size: 16px; 
+  outline: none;
 }
