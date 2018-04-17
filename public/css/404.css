@@ -1,52 +1,54 @@
 
 body,html,img{
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 
 html,body{
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
 }
 
 
 #error-wapper{
-  text-align: center;
-  background-color: #76ffd6;
-  height: 100%;
-  width: 100%;
+	text-align: center;
+	background-color: #76ffd6;
+	height: 100%;
+	width: 100%;
 }
 
 #error-wapper img {
-  padding-top: 50px;
+	padding-top: 50px;
 }
 
 .error-btn .button {
-  position: relative;
-  display: block;
-  width: 180px;
-  margin: 30px auto 0;
-  padding: 14px 15px;
-  border: 2px solid #fff;
-  background: rgb(80, 80, 80);
-  color: #f9d34d;
-  font-weight: 400;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  letter-spacing: .1em;
+	position: relative;
+	display: block;
+	width: 180px;
+	margin: 30px auto 0;
+	padding: 14px 15px;
+	border: 2px solid #fff;
+	background: rgb(80, 80, 80);
+	color: #f9d34d;
+	font-weight: 400;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .1em;
 }
 
 .error-btn .button:hover {
-  background: rgba(0, 0, 0, 0.6);
-  font-weight: 700;
+	background: rgba(0, 0, 0, 0.6);
+	font-weight: 700;
 }
 
 .error-text h4,
 .error-text h1{
-  color: rgba(0, 34, 64, 0.9);
-  letter-spacing: 1px;
+	color: rgba(0, 34, 64, 0.9);
+	letter-spacing: 1px;
 }
+
+

@@ -337,6 +337,12 @@ img {
   height: 505px;
   background: url("../images/aboutme.jpg") no-repeat; }
 
+.index-aboutme .about-message {
+  text-decoration: underline; }
+
+.index-aboutme .about-message:hover {
+  color: #eb5252; }
+
 .index-aboutme .about-me {
   width: 1200px;
   height: 100%; }

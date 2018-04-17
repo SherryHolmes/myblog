@@ -65,7 +65,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D4850', endColorstr='#1e1e1e',GradientType=0 ); /* ie */
   box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* CSS3 */
   -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Firefox */
-  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Safari, Chrome */  
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Safari, Chrome */
 }
 
 .index-header .head-nav .header-menu .item a {
@@ -96,7 +96,7 @@
   display: block;
   float: right;
   margin-right: 100px;
-  margin-top: 56px; 
+  margin-top: 56px;
 }
 
 .nav-menu .item {
@@ -112,8 +112,8 @@
   margin-right: 50px;
   font-family: "Segoe UI";
   font-weight: 700;
-  color: #fff; 
-  line-height: 60px; 
+  color: #fff;
+  line-height: 60px;
 }
 
 .nav-login .user-name span {
@@ -275,7 +275,7 @@
 
 .feature-img img{
   height: 400px;
-  width: auto; 
+  width: auto;
 }
 
 .index-contact {
@@ -313,6 +313,14 @@
   width: 100%;
   height: 505px;
   background: url("../images/aboutme.jpg") no-repeat; }
+
+.index-aboutme .about-message {
+  text-decoration: underline;
+}
+
+.index-aboutme .about-message:hover {
+  color: #eb5252;
+}
 
 .index-aboutme .about-me {
   width: 1200px;
@@ -412,7 +420,7 @@
   left: 150px;
   font-size: 14px;
   color: #fff;
-  font-weight: 700; 
+  font-weight: 700;
 }
 
 .index-leave-words form input {
@@ -431,7 +439,7 @@
   background: transparent;
   border: 2px solid #fff;
   color: #fff;
-  font-size: 16px; 
+  font-size: 16px;
   outline: none;
 }
 
@@ -445,7 +453,7 @@
   width: 370px;
   height: 62px;
   background: #eb5252;
-  border: none; 
+  border: none;
   margin-top: 30px;
 }
 
@@ -471,7 +479,7 @@
   top: 120px;
   left: 150px;
   width: 570px;
-  height: 200px; 
+  height: 200px;
   color: #fff;
 }
 
