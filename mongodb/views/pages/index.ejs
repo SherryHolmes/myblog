@@ -9,49 +9,53 @@
   <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-  <div class="index-header">
-    <div class="head-nav">
+  <div class="public-header">
+    <div class="header-body">
       <div class="header-logo">Sherry<span>H</span>olmes</div>
-      <% if(user) {%>
-      <div class="nav-login">
-        <div class="login-item user-name">
-          <%=user.name %><span> | </span>
-        </div>
-        <div class="login-item"><a href="/logout">Logout</a></div>
-      </div>
-      <% } else {%>
-    <div class="nav-login">
-      <a href="/login">Login<span> | </span>Logup</a>
+        <ul class="header-menu">
+          <li class="item active"><a href="/">Home</a></li>
+          <li class="item"><a href="/blog">Articles</a></li>
+          <li class="item"><a href="/article/message">Messages</a></li>
+          <li class="item"><a href="">Contact</a></li>
+          <li class="nav-login">
+            <% if(user) {%>
+              <div class="login-item user-name">
+                <%=user.name %><span> | </span>
+              </div>
+              <div class="login-item"><a href="/logout">Logout</a></div>
+              <% } else {%>
+                <a href="/login">Login<span> | </span>Logup</a>
+              <% } %>
+            </li>
+        </ul>
     </div>
-    <% } %>
-      <ul class="header-menu">
-        <li class="item active"><a href="/">Home</a></li>
-        <li class="item"><a href="/blog">Articles</a></li>
-        <li class="item"><a href="/article/message">Messages</a></li>
-        <li class="item"><a href="">Contact</a></li>
-      </ul>
-    </div>
-    <div class="head-banner">
+
+  </div>
+  <div class="index-banner">
+    <div class="banner-body">
       <div class="banner-text">
         <div class="text1">“I’M LOOKING FOR THE UNEXPECTED.</div>
-        <div class="text2">I’M LOOKING FOR THINGS I’VE NEVER SEEN BEFORE.”</div>
+        <div class="text2"> &nbsp;I’M LOOKING FOR THINGS I’VE NEVER SEEN BEFORE.”</div>
       </div>
     </div>
+    <!-- <img src="/images/banner.jpg" alt="" class="banner-img"> -->
   </div>
   <div class="index-feature">
-    <div class="feature-content">
-      <h4 class="content-title">FEATURE ARTICLES</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odio laudantium in et ipsam maxime quae accusantium voluptatum
-      dolor tenetur ullam quasi aut ea inventore porro, veniam repellendus impedit suscipit.
-      </p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odio laudantium in et ipsam maxime quae accusantium voluptatum
-      dolor tenetur ullam quasi aut ea inventore porro, veniam repellendus impedit suscipit.</p>
-      <div class="article-btn">
-        <a href="/blog">CLICK ME</a>
+    <div class="feature-body">
+      <div class="feature-content">
+        <h4 class="content-title">FEATURE ARTICLES</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odio laudantium in et ipsam maxime quae accusantium voluptatum
+          dolor tenetur ullam quasi aut ea inventore porro, veniam repellendus impedit suscipit.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odio laudantium in et ipsam maxime quae accusantium voluptatum
+          dolor tenetur ullam quasi aut ea inventore porro, veniam repellendus impedit suscipit.</p>
+        <div class="article-btn">
+          <a href="/blog">CLICK ME</a>
+        </div>
       </div>
-    </div>
-    <div class="feature-img">
-      <img src="/images/article.png" alt="">
+      <div class="feature-img">
+        <img src="/images/article.png" alt="">
+      </div>
     </div>
   </div>
   <div class="index-aboutme" id="about-me">
@@ -95,44 +99,49 @@
     </ul>
   </div>
   <div class="index-testimonials">
-    <div class="testimonials-title">TESTIMONIALS</div>
-    <div class="testimonials-icon">
-      <i class="fa fa-heart fa-fw"></i>
+    <div class="testimonials-body">
+      <div class="testimonials-title">TESTIMONIALS</div>
+      <div class="testimonials-icon">
+        <i class="fa fa-heart fa-fw"></i>
+      </div>
+      <p>软件研发攻城狮。搞过嵌入式驱动、研究过linux，会c,c++...现在对前后端感兴趣。以Coding为生，以Coding为乐。编程方面略有心得，期待互相学习。</p>
+      <h5>Sherry Holmes</h5>
     </div>
-    <p>软件研发攻城狮。搞过嵌入式驱动、研究过linux，会c,c++...现在对前后端感兴趣。以Coding为生，以Coding为乐。编程方面略有心得，期待互相学习。</p>
-    <h5>Sherry Holmes</h5>
   </div>
   <div class="index-contact" id="contact-me">
-    <div class="contact-me">CONTACT ME</div>
-    <div class="contact-icon">
-      <a target="_blank" href="https://passport.weibo.com" class="icon-sina-weibo">
-        <i class="fa fa-weibo fa-fw"></i>
-      </a>
+    <div class="contact-body">
+      <div class="contact-me">CONTACT ME</div>
+      <div class="contact-icon">
+        <a target="_blank" href="https://passport.weibo.com" class="icon-sina-weibo">
+          <i class="fa fa-weibo fa-fw"></i>
+        </a>
+      </div>
+      <p>I love programming.If you are interested, please contact me.Let's explore and learn from each other.</br>QQ:896907062<br>e-mail:haorui5@163.com</p>
     </div>
-    <p>I love programming.If you are interested, please contact me.Let's explore and learn from each other.</br>
-      QQ:896907062<br>e-mail:haorui5@163.com</p>
   </div>
   <div class="index-leave-words" id="leave-word">
-    <div class="message-title">LEAVE WORDS</div>
-    <div class="message-text">
-      <ul>
-        <li>如果你有什么意见或建议；如果你也对编程感兴趣；如果你喜欢我的博客；如果你发现我的博客有什么问题，都欢迎你这给我留言。</li>
-        <li>或者通过以下方式联系我：</li>
-        <li>QQ:896907062</li>
-        <li>e-mail: haorui5@163.com</li>
-        <li>谢谢！</li>
-      </ul>
+    <div class="leave-words-body">
+      <div class="message-title">LEAVE WORDS</div>
+      <div class="message-text">
+        <ul>
+          <li>如果你有什么意见或建议；如果你也对编程感兴趣；如果你喜欢我的博客；如果你发现我的博客有什么问题，都欢迎你这给我留言。</li>
+          <li>或者通过以下方式联系我：</li>
+          <li>QQ:896907062</li>
+          <li>e-mail: haorui5@163.com</li>
+          <li>谢谢！</li>
+        </ul>
+      </div>
+      <form method="post" action="/message" enctype="multipart/form-data">
+        <% if(user) {%>
+          <input type="hidden" name="name" value=<%=user.name %> >
+          <% } %>
+            <label for="#message-textarea">留言 Message</label>
+            <br>
+            <textarea type="text" name="content" id="message-textarea"></textarea>
+            <input type="submit" class="message-submit" value="MESSAGE">
+            <a href="/article/message" class="message-board">去留言板 go to message board</a>
+      </form>
     </div>
-    <form method="post" action="/message" enctype="multipart/form-data">
-      <% if(user) {%>
-      <input type="hidden" name="name" value=<%=user.name %> >
-      <% } %>
-      <label for="#message-textarea">留言 Message</label>
-      <br>
-      <textarea type="text" name="content" id="message-textarea"></textarea>
-      <input type="submit" class="message-submit" value="MESSAGE">
-      <a href="/article/message" class="message-board">去留言板 go to message board</a>
-    </form>
   </div>
   <div class="index-footer">
     <ul class="footer-menu">

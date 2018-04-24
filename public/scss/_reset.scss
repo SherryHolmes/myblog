@@ -4,11 +4,14 @@ body, div, dl, dt, dd, ul, li, h1, h2, section,
 h3, h4, h5, h6, input, form, a, p, textarea {
   margin: 0 auto;
   padding: 0;
-  font-family: "Segoe UI", "Adobe Fan Heiti Std B", Arial, sans-serif; }
-
+  font-family: "Segoe UI", "Adobe Fan Heiti Std B", Arial, sans-serif;
+}
+ 
 body {
-  background: #efefef;
-  overflow-x: hidden; }
+  background: rgb(33,33,33);
+  overflow-x: hidden;
+  margin: 0 auto; 
+} 
 
 ol, ul, li {
   list-style: none; }

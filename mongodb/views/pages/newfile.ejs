@@ -2,13 +2,19 @@
 <html>
 <head>
   <title>发表文章</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
   <!-- redactor需要jquery的1.9.0版本支持 -->
   <script src="/js/jquery-1.9.0.min.js"></script>
+  <link rel="stylesheet" href="/css/calendar.css">
+  <script src="/js/calendar.js"></script>
   <link rel="stylesheet" href="/libs/redactor/redactor/redactor.css" />
   <script src="/libs/redactor/redactor/redactor.min.js"></script>
-  <script src="/js/article.js"></script>
+  <link rel="stylesheet" href="/css/blog.css">
+  <link rel="stylesheet" href="/css/newfile.css">
+  <script src="/js/digit.js"></script>
+  <script src="/js/countdown.js"></script>
   <script type="text/javascript">
     $(document).ready(
       function () {
@@ -16,29 +22,152 @@
       }
     );
   </script>
-
-  <style>
-
-    .newfile-page {
-      width: 940px;
-      margin: 50px auto;
-    }
-
-  </style>
-
 </head>
 
 <body>
-  <div class="newfile-page">
-    <form method="post", action="/article", enctype="multipart/form-data">
-      <label for="#article-title">Title:</label><br>
-      <input id="article-title" type="text" name="title" value=<% article.title %> ><br><br>
-      <label for="#article-content">Content:</label><br>
-      <textarea id="article-content" name="content" value=<% article.title %> ></textarea>
-      <br><br>
-      <input type="submit" class="message" value="发表">
-    </form>
+  <div class="public-header">
+    <div class="header-logo">Sherry<span>H</span>olmes</div>
+    <% if(user) {%>
+      <div class="nav-login">
+        <div class="login-item user-name">
+          <%=user.name %><span> | </span>
+        </div>
+        <div class="login-item"><a href="/logout">Logout</a></div>
+      </div>
+      <% } else {%>
+        <div class="nav-login">
+          <a href="/login">Login<span> | </span>Logup</a>
+        </div>
+        <% } %>
+          <ul class="header-menu">
+            <li class="item"><a href="/">Home</a></li>
+            <li class="item active"><a href="/blog">Articles</a></li>
+            <li class="item"><a href="/article/message">Messages</a></li>
+            <li class="item"><a href="">Contact</a></li>
+          </ul>
   </div>
+  <div class="blog-panel">
+    <div class="panel-left clearfloat">
+      <div class="newfile-body">
+        <div class="body-title">
+          <div class="type-check-box">
+            <select id="selType">
+              <option value="0">请选择</option>
+              <option value="1">原创</option>
+              <option value="2">转载</option>
+              <option value="3">翻译</option>
+            </select>
+          </div>
+          <input type="text" id="txt-title" maxlength="100" placeholder="输入文章标题">
+        </div>
+      </div>
+      <div class="body-file">
+        <textarea id="article-content" name="content" value=<% article.title %> ></textarea>
+        <button type="text" class="message" value="发表">发表</button>
+      </div>
+    <div class="panel-right clearfloat">
+      <a href="/article/new" class="new-file">
+        <i class="fa fa-plus fa-fw"></i>
+        写文章
+      </a>
+      <ul class="right-list">
+        <li class="list-item list-canvas">
+          <canvas id="canvas-clock">
+            当前浏览器不支持Canvas，请更换浏览器后再试
+          </canvas>
+        </li>
+        <li class="list-item Calendar">
+          <div id="idCalendarPre">
+            <<</div>
+              <div id="idCalendarNext">>></div>
+              <span id="idCalendarYear">2008</span>年 <span id="idCalendarMonth">8</span>月
+              <table cellspacing="0">
+                <thead>
+                  <tr>
+                    <td>日</td>
+                    <td>一</td>
+                    <td>二</td>
+                    <td>三</td>
+                    <td>四</td>
+                    <td>五</td>
+                    <td>六</td>
+                  </tr>
+                </thead>
+                <tbody id="idCalendar">
+                </tbody>
+              </table>
+        </li>
+      </ul>
+      </div>
+    </div>
+    <footer id="footer-link">
+      <ul class="share-group">
+        <li>
+          <a target="_blank" href="http://github.com/" class="icon-github">
+          <i class="fa fa-github fa-fw"></i>
+        </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://google.com" class="icon-google-plus3">
+          <i class="fa fa-google fa-fw"></i>
+        </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://passport.weibo.com" class="icon-sina-weibo">
+          <i class="fa fa-weibo fa-fw"></i>
+        </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://ihaorui.me/" class="icon-comment">
+          <i class="fa fa-home fa-fw"></i>
+        </a>
+        </li>
+      </ul>
+      <div class="copy">
+        &copy SherryHolmes - 2017
+      </div>
+    </footer>
 </body>
+
+<!-- <body>
+  <div class="public-header">
+    <div class="header-logo">Sherry<span>H</span>olmes</div>
+    <% if(user) {%>
+      <div class="nav-login">
+        <div class="login-item user-name">
+          <%=user.name %><span> | </span>
+        </div>
+        <div class="login-item"><a href="/logout">Logout</a></div>
+      </div>
+      <% } else {%>
+        <div class="nav-login">
+          <a href="/login">Login<span> | </span>Logup</a>
+        </div>
+        <% } %>
+          <ul class="header-menu">
+            <li class="item"><a href="/">Home</a></li>
+            <li class="item"><a href="/blog">Articles</a></li>
+            <li class="item active"><a href="/article/message">Messages</a></li>
+            <li class="item"><a href="">Contact</a></li>
+          </ul>
+  </div>
+  <div class="newfile-body">
+    <div class="body-title">
+      <div class="type-check-box">
+        <select id="selType">
+          <option value="0">请选择</option>
+          <option value="1">原创</option>
+          <option value="2">转载</option>
+          <option value="3">翻译</option>
+        </select>
+      </div>
+      <input type="text" id="txt-title" maxlength="100" placeholder="输入文章标题">
+    </div>
+    <div class="body-file">
+      <textarea id="article-content" name="content" value=<% article.title %> ></textarea>
+      <button type="text" class="message" value="发表">发表</button>
+    </div>
+  </div>
+</body> -->
 
 </html>

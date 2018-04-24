@@ -67,7 +67,7 @@ exports.detail = function (req, res) {
       if (err) {
         console.log(err);
       }
-    })    
+    })
     Article.findById(id, function (err, article) {
       if (err) {
         console.log(err);

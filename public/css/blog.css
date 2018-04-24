@@ -7,8 +7,9 @@ h3, h4, h5, h6, input, form, a, p, textarea {
   font-family: "Segoe UI", "Adobe Fan Heiti Std B", Arial, sans-serif; }
 
 body {
-  background: #efefef;
-  overflow-x: hidden; }
+  background: #212121;
+  overflow-x: hidden;
+  margin: 0 auto; }
 
 ol, ul, li {
   list-style: none; }
@@ -49,6 +50,10 @@ img {
   background: radial-gradient(#212121, #393939, #212121);
   /* 标准的语法（必须放在最后） */ }
 
+.public-header .header-body {
+  width: 1536px;
+  margin: 0 auto; }
+
 .public-header .header-logo {
   float: left;
   margin-left: 160px;
@@ -65,8 +70,10 @@ img {
   float: right;
   margin-right: 150px; }
 
+.public-header .header-menu li {
+  float: left; }
+
 .public-header .header-menu .item {
-  float: left;
   margin-right: 12px;
   width: 120px;
   height: 28px;

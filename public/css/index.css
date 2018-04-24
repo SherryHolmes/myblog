@@ -7,8 +7,9 @@ h3, h4, h5, h6, input, form, a, p, textarea {
   font-family: "Segoe UI", "Adobe Fan Heiti Std B", Arial, sans-serif; }
 
 body {
-  background: #efefef;
-  overflow-x: hidden; }
+  background: #212121;
+  overflow-x: hidden;
+  margin: 0 auto; }
 
 ol, ul, li {
   list-style: none; }
@@ -33,14 +34,8 @@ img {
   visibility: hidden;
   height: 0; }
 
-.index-header {
-  position: relative;
-  width: 100%;
-  height: 800px;
-  background: url("../images/banner.jpg") no-repeat; }
-
-.index-header .head-nav {
-  position: absolute;
+.public-header {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -55,7 +50,11 @@ img {
   background: radial-gradient(#212121, #393939, #212121);
   /* 标准的语法（必须放在最后） */ }
 
-.index-header .head-nav .header-logo {
+.public-header .header-body {
+  width: 1536px;
+  margin: 0 auto; }
+
+.public-header .header-logo {
   float: left;
   margin-left: 160px;
   color: #fff;
@@ -64,15 +63,17 @@ img {
   line-height: 60px;
   font-style: italic; }
 
-.index-header .head-nav .header-logo > span {
+.public-header .header-logo > span {
   color: #de2323; }
 
-.index-header .head-nav .header-menu {
+.public-header .header-menu {
   float: right;
   margin-right: 150px; }
 
-.index-header .head-nav .header-menu .item {
-  float: left;
+.public-header .header-menu li {
+  float: left; }
+
+.public-header .header-menu .item {
   margin-right: 12px;
   width: 120px;
   height: 28px;
@@ -107,40 +108,120 @@ img {
   -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   /* Safari, Chrome */ }
 
-.index-header .head-nav .header-menu .item a {
+.public-header .header-menu .item a {
   color: #f7f7f7; }
 
-.index-header .head-nav .header-menu .item:hover {
+.header-menu .item:hover {
   background: #eb5252; }
 
-.index-header .head-nav .header-menu .active {
+.public-header .header-menu .active {
   background: #de2323; }
 
-.nav-title {
-  float: left;
-  margin-left: 150px;
-  line-height: 150px;
-  font-family: "Segoe UI";
-  font-size: 30px;
+.blog-title {
+  width: 100%;
+  height: 90px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 17px;
   font-weight: 700;
-  color: #fff; }
+  font-style: italic; }
 
-.nav-title span {
-  color: #eb5252; }
+.blog-title .title-content {
+  float: left; }
 
-.nav-menu {
-  display: block;
-  float: right;
-  margin-right: 100px;
-  margin-top: 56px; }
+.blog-title .title-content p {
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 30px; }
 
-.nav-menu .item {
+.blog-panel {
+  position: relative;
+  width: 1200px;
+  height: 100%;
+  margin-top: 120px; }
+
+.blog-panel .panel-left {
   float: left;
-  width: 80px;
-  height: 32px;
-  margin-right: 20px;
-  line-height: 32px;
-  text-align: center; }
+  width: 800px;
+  margin-left: 0;
+  margin-bottom: 100px; }
+
+.blog-panel .panel-right {
+  position: fixed;
+  left: 900px;
+  height: 1000px;
+  width: 300px;
+  right: 0;
+  top: 120px;
+  margin-bottom: 100px; }
+
+.panel-right .new-file {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  color: #3D4850;
+  font-size: 30px; }
+
+.panel-right .new-file:hover {
+  color: #202020;
+  text-decoration: underline; }
+
+.right-list .list-canvas {
+  position: relative;
+  height: 80px;
+  width: 280px;
+  margin-top: 20px;
+  box-shadow: 0 0 0 5px #1e1e1e, 0 0 0 10px #de2323;
+  border-radius: 10px; }
+
+.right-list .Calendar {
+  position: relative;
+  margin-top: 60px;
+  background: #e0e0e0; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  height: 90px;
+  width: 100%;
+  text-align: center;
+  background: -webkit-radial-gradient(#212121, #393939, #212121);
+  /* Safari 5.1 - 6.0 */
+  background: -o-radial-gradient(#212121, #393939, #212121);
+  /* Opera 11.6 - 12.0 */
+  background: -moz-radial-gradient(#212121, #393939, #212121);
+  /* Firefox 3.6 - 15 */
+  background: radial-gradient(#212121, #393939, #212121);
+  /* 标准的语法（必须放在最后） */ }
+
+footer ul.share-group {
+  display: block;
+  width: 1080px;
+  margin: 0 auto;
+  line-height: 60px; }
+
+.share-group li {
+  display: inline-block; }
+
+.share-group li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  margin-right: 20px; }
+
+.redactor_toolbar {
+  display: none; }
+
+.redactor_editor {
+  height: 100px;
+  background: #e0e0e0 !important;
+  width: 100%;
+  overflow: hidden;
+  padding: 2px !important; }
 
 .nav-login {
   float: right;
@@ -154,68 +235,52 @@ img {
   color: #fff; }
 
 .nav-login .user-name {
-  color: #eb5252; }
+  color: #de2323; }
 
 .nav-login a:hover {
-  color: #eb5252;
+  color: #de2323;
   text-decoration: underline; }
 
 .nav-login .login-item {
   float: left; }
 
-.nav-menu .last a {
-  width: 120px;
-  height: 32px;
-  background: #353f46; }
-
-.nav-menu .last > .login-item {
-  float: left; }
-
-.nav-menu .last a span {
-  color: #eb5252; }
-
-.nav-menu .last a:hover {
-  border: 2px solid #eb5252; }
-
-.nav-menu .item a {
+.index-banner {
   position: relative;
-  display: block;
-  font-size: 14px;
-  font-weight: 700; }
-
-.nav-menu .item:hover a {
-  color: #eb5252; }
-
-.nav-menu .active {
-  border: 2px solid #eb5252; }
-
-.nav-menu .active a {
-  color: #eb5252; }
-
-.index-header .head-banner {
-  position: absolute;
-  top: 120px;
-  left: 0;
-  width: 100%;
+  margin: 0 auto;
   height: 650px;
+  background-image: url("/images/banner.jpg");
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000;
+  padding: 100px 0;
   text-align: center; }
 
-.head-banner .banner-text {
-  margin-top: 250px;
+.index-banner .banner-text {
+  text-transform: uppercase;
   font-size: 42px;
   font-weight: 300;
-  color: #fff; }
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  margin-top: 220px; }
 
-.head-banner .banner-text .text1 {
-  height: 65px;
-  width: 710px;
-  background: #4b565e;
-  margin-bottom: 12px; }
-
-.head-banner .banner-text .text2 {
-  height: 65px;
-  width: 990px;
+.index-banner .banner-text .text1 {
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 20px 10px;
   background: #4b565e; }
+
+.index-banner .banner-text .text2 {
+  display: inline-block;
+  background: #4b565e;
+  padding: 20px 10px; }
+
+.index-funny {
+  position: relative;
+  height: 262px; }
 
 .index-funny .funny-panel {
   position: absolute;
@@ -232,7 +297,7 @@ img {
 
 .index-funny {
   position: relative;
-  width: 100%;
+  width: 1600px;
   height: 850px; }
 
 .index-funny .funny-title {
@@ -254,10 +319,16 @@ img {
   height: 460px;
   background: #eb5252; }
 
+.feature-body {
+  position: relative;
+  width: 1600px;
+  height: 460px;
+  background: #eb5252; }
+
 .feature-content {
   float: left;
-  width: 470px;
-  margin-left: 150px;
+  margin-left: 10%;
+  width: 40%;
   margin-top: 70px; }
 
 .feature-content .content-title {
@@ -273,7 +344,7 @@ img {
   font-weight: 400; }
 
 .article-btn {
-  margin: 0;
+  margin-left: 0;
   margin-top: 40px;
   width: 140px;
   height: 40px;
@@ -295,7 +366,7 @@ img {
 .feature-img {
   float: right;
   margin-top: 30px;
-  margin-right: 250px; }
+  margin-right: 10%; }
 
 .feature-img img {
   height: 400px;
@@ -304,6 +375,12 @@ img {
 .index-contact {
   position: relative;
   width: 100%;
+  height: 360px;
+  background: #eb5252; }
+
+.contact-body {
+  position: relative;
+  width: 1600px;
   height: 360px;
   background: #eb5252; }
 
@@ -333,9 +410,24 @@ img {
 
 .index-aboutme {
   position: relative;
-  width: 100%;
-  height: 505px;
-  background: url("../images/aboutme.jpg") no-repeat; }
+  height: 200px;
+  background-image: url("/images/aboutme.jpg");
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000;
+  padding: 100px 0; }
+
+.index-aboutme .about-img {
+  margin: 0 auto; }
+
+.index-aboutme .about-me {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -560px;
+  width: 1600px; }
 
 .index-aboutme .about-message {
   text-decoration: underline; }
@@ -385,9 +477,16 @@ img {
   height: 360px;
   background: #fff; }
 
+.testimonials-body {
+  position: relative;
+  width: 1600px;
+  height: 360px;
+  background: #fff; }
+
 .testimonials-title {
   float: left;
   margin-left: 150px;
+  margin-top: 20px;
   font-weight: 300;
   text-decoration: underline; }
 
@@ -421,9 +520,20 @@ img {
 
 .index-leave-words {
   position: relative;
-  width: 100%;
   height: 814px;
-  background: url("../images/message.jpg") no-repeat; }
+  background-image: url("/images/message.jpg");
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000;
+  padding: 100px 0;
+  height: 814px; }
+
+.leave-words-body {
+  position: relative;
+  width: 1600px;
+  height: 814px; }
 
 .index-leave-words .message-title {
   position: absolute;
@@ -503,7 +613,7 @@ img {
 
 .index-footer {
   position: relative;
-  width: 100%;
+  width: 1600px;
   height: 70px;
   background: -webkit-radial-gradient(#212121, #393939, #212121);
   /* Safari 5.1 - 6.0 */
@@ -537,7 +647,5 @@ img {
   color: #fff;
   font-size: 12px;
   font-weight: 600; }
-
-/*# sourceMappingURL=index.css.map */
 
 /*# sourceMappingURL=index.css.map */

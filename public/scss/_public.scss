@@ -11,6 +11,11 @@
   background: radial-gradient(rgba(33,33,33, 1), rgba(57,57,57, 1), rgba(33,33,33, 1)); /* 标准的语法（必须放在最后） */
 }
 
+.public-header .header-body {
+  width: 1536px;
+  margin: 0 auto;
+}
+
 .public-header .header-logo {
   float: left;
   margin-left: 160px;
@@ -30,8 +35,11 @@
   margin-right: 150px;
 }
 
-.public-header .header-menu .item{
+.public-header .header-menu li {
   float: left;
+}
+
+.public-header .header-menu .item{
   margin-right: 12px;
   width: 120px;
   height: 28px;
