@@ -1,7 +1,7 @@
-var Index = require('../mongodb/controllers/index');
-var Article = require('../mongodb/controllers/article');
-var User = require('../mongodb/controllers/user');
-var Message = require('../mongodb/controllers/message');
+var Index = require('../src/controllers/index');
+var Article = require('../src/controllers/article');
+var User = require('../src/controllers/user');
+var Message = require('../src/controllers/message');
 
 module.exports = function (app) {
   // pre handle user 预处理

@@ -8,7 +8,8 @@ h3, h4, h5, h6, input, form, a, p, textarea {
 
 body {
   background: #fff;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 ol, ul, li {
   list-style: none; }

@@ -4,26 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href="../css/login.css">
   <title>登录/注册</title>
 </head>
+
 <body>
   <div class="login-bg">
-    <img src="/images/login.jpg" alt="">
+    <img src="../images/login.jpg" alt="">
     <div class="mask"></div>
     <a href="/" class="blog-title">Back to Home</a>
   </div>
   <div class="login-body">
-    <div class="body-title">LOGIN</div>
-    <form method="POST", action="/user/login">
-      <input class="user-name" type="text" name="name" placeholder="username" >
+    <div class="body-title">LOGUP</div>
+    <form method="POST" , action="/user/logup">
+      <input class="user-name" type="text" name="name" placeholder="username">
       <input type="password" name="password" class="password" placeholder="password">
-      <input type="submit" class="login-submit" value="LOGIN">
+      <input type="submit" class="login-submit" value="LOGUP">
       <ul class="new-user">
-        <li class="item"><a href="/logup">Register here!</a></li>
-        <li class="item">New user?</li>
+        <li class="item"><a href="/login">Login here!</a></li>
+        <li class="item">Had register?</li>
       </ul>
     </form>
   </div>
 </body>
+
 </html>

@@ -7,7 +7,7 @@ $WidthSize : 1600px;
   position: relative;
   margin: 0 auto;
   height: 650px;
-  background-image: url("/images/banner.jpg");
+  background-image: url("../images/banner.jpg");
   background-position: top center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -22,7 +22,7 @@ $WidthSize : 1600px;
   text-transform: uppercase;
   font-size: 42px;
   font-weight: 300;
-  color: #fff; 
+  color: #fff;
   font-weight: 400;
   letter-spacing: 2px;
   word-spacing: 4px;
@@ -33,12 +33,12 @@ $WidthSize : 1600px;
   display: inline-block;
   margin-bottom: 30px;
   padding: 20px 10px;
-  background: #4b565e;; 
+  background: #4b565e;;
 }
 
 .index-banner .banner-text .text2 {
   display: inline-block;
-  background: #4b565e;; 
+  background: #4b565e;;
   padding: 20px 10px;
 }
 
@@ -53,19 +53,19 @@ $WidthSize : 1600px;
   left: 50%;
   height: 262px;
   width: 1200px;
-  margin-left: -600px; 
+  margin-left: -600px;
 }
 
 .index-funny .funny-panel .item {
   float: left;
   width: 300px;
-  height: 260px; 
+  height: 260px;
 }
 
 .index-funny {
   position: relative;
   width: $WidthSize;
-  height: 850px; 
+  height: 850px;
 }
 
 .index-funny .funny-title {
@@ -76,46 +76,46 @@ $WidthSize : 1600px;
   font-weight: 300;
   color: #de2323;
   text-decoration: underline;
-  letter-spacing: 1px; 
+  letter-spacing: 1px;
 }
 
 .index-funny .funny-panel .item {
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
 
 .index-feature {
   position: relative;
   width: 100%;
   height: 460px;
-  background: #eb5252; 
+  background: #eb5252;
 }
 
 .feature-body {
   position: relative;
   width: $WidthSize;
   height: 460px;
-  background: #eb5252; 
+  background: #eb5252;
 }
 
 .feature-content {
   float: left;
   margin-left: 10%;
   width: 40%;
-  margin-top: 70px; 
+  margin-top: 70px;
 }
 
 .feature-content .content-title {
   font-size: 30px;
   font-weight: 300;
   color: #fff;
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 .feature-content p {
   margin-top: 30px;
   color: #fff;
   font-size: 14px;
-  font-weight: 400; 
+  font-weight: 400;
 }
 
 .article-btn {
@@ -125,27 +125,27 @@ $WidthSize : 1600px;
   height: 40px;
   border: 2px solid #353f46;
   line-height: 40px;
-  text-align: center; 
+  text-align: center;
 }
 
 .article-btn:hover {
-  border: 2px solid #fff; 
+  border: 2px solid #fff;
 }
 
 .article-btn:hover a {
-  color: #fff; 
+  color: #fff;
 }
 
 .article-btn a {
   color: #353f46;
   font-weight: 700;
-  font-size: 14px; 
+  font-size: 14px;
 }
 
 .feature-img {
   float: right;
   margin-top: 30px;
-  margin-right: 10%; 
+  margin-right: 10%;
 }
 
 .feature-img img{
@@ -157,33 +157,33 @@ $WidthSize : 1600px;
   position: relative;
   width: 100%;
   height: 360px;
-  background: #eb5252; 
+  background: #eb5252;
 }
 
 .contact-body {
   position: relative;
   width: $WidthSize;
   height: 360px;
-  background: #eb5252; 
+  background: #eb5252;
 }
 
 .index-contact .contact-icon,
 .index-contact .contact-me {
   font-size: 30px;
   color: #fff;
-  margin-top: 70px; 
+  margin-top: 70px;
 }
 
 .index-contact .contact-me {
   float: left;
   margin-left: 150px;
   text-decoration: underline;
-  font-weight: 300; 
+  font-weight: 300;
 }
 
 .index-contact .contact-icon {
   float: right;
-  margin-right: 150px; 
+  margin-right: 150px;
 }
 
 .index-contact p {
@@ -192,13 +192,13 @@ $WidthSize : 1600px;
   left: 150px;
   font-size: 28px;
   color: #fff;
-  font-weight: 300; 
+  font-weight: 300;
 }
 
 .index-aboutme {
   position: relative;
   height: 200px;
-  background-image: url("/images/aboutme.jpg");
+  background-image: url("../images/aboutme.jpg");
   background-position: top center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -230,7 +230,7 @@ $WidthSize : 1600px;
 
 .index-aboutme .about-me {
   width: 1200px;
-  height: 100%; 
+  height: 100%;
 }
 
 .index-aboutme .about-me .item {
@@ -238,21 +238,21 @@ $WidthSize : 1600px;
   width: 560px;
   height: 100%;
   margin-top: 90px;
-  margin-right: 30px; 
+  margin-right: 30px;
 }
 
 .index-aboutme .about-me .item .title {
   font-size: 30px;
   color: #fff;
   font-weight: 300;
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 .index-aboutme .about-me .item .content {
   font-size: 14px;
   color: #fff;
   font-weight: 400;
-  margin-top: 40px; 
+  margin-top: 40px;
 }
 
 .index-aboutme .about-me .item .link-item {
@@ -263,25 +263,25 @@ $WidthSize : 1600px;
   line-height: 60px;
   text-align: center;
   margin-right: 24px;
-  margin-top: 30px; 
+  margin-top: 30px;
 }
 
 .index-aboutme .about-me .item .link-item a {
-  font-size: 30px; 
+  font-size: 30px;
 }
 
 .index-testimonials {
   position: relative;
   width: 100%;
   height: 360px;
-  background: #fff; 
+  background: #fff;
 }
 
 .testimonials-body {
   position: relative;
   width: $WidthSize;
   height: 360px;
-  background: #fff; 
+  background: #fff;
 }
 
 .testimonials-title {
@@ -289,18 +289,18 @@ $WidthSize : 1600px;
   margin-left: 150px;
   margin-top: 20px;
   font-weight: 300;
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 .testimonials-icon {
   float: right;
-  margin-right: 150px; 
+  margin-right: 150px;
 }
 
 .testimonials-title,
 .testimonials-icon {
   font-size: 30px;
-  color: #de2323; 
+  color: #de2323;
 }
 
 .index-testimonials p {
@@ -312,7 +312,7 @@ $WidthSize : 1600px;
   font-size: 28px;
   color: #de2323;
   font-weight: 300;
-  line-height: 50px; 
+  line-height: 50px;
 }
 
 .index-testimonials h5 {
@@ -321,13 +321,13 @@ $WidthSize : 1600px;
   bottom: 50px;
   left: 150px;
   color: #eb5252;
-  font-size: 14px; 
+  font-size: 14px;
 }
 
 .index-leave-words {
   position: relative;
   height: 814px;
-  background-image: url("/images/message.jpg");
+  background-image: url("../images/message.jpg");
   background-position: top center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -350,7 +350,7 @@ $WidthSize : 1600px;
   color: #fff;
   font-size: 30px;
   font-weight: 300;
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 
@@ -371,7 +371,7 @@ $WidthSize : 1600px;
   background: transparent;
   color: #fff;
   font-size: 14px;
-  font-weight: 700; 
+  font-weight: 700;
 }
 
 .index-leave-words form textarea {
@@ -425,11 +425,11 @@ $WidthSize : 1600px;
 }
 
 .index-leave-words  .message-text li:first-child {
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
 
 .index-leave-words  .message-text li {
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
 }
 
 .index-footer {
@@ -445,22 +445,22 @@ $WidthSize : 1600px;
 .index-footer .footer-menu {
   position: relative;
   margin-left: 150px;
-  line-height: 70px; 
+  line-height: 70px;
 }
 
 .index-footer .footer-menu .item {
   float: left;
-  margin-right: 16px; 
+  margin-right: 16px;
 }
 
 .index-footer .footer-menu .item a {
   color: #fff;
   font-size: 12px;
-  font-weight: 600; 
+  font-weight: 600;
 }
 
 .index-footer .footer-menu .item span {
-  margin-left: 15px; 
+  margin-left: 15px;
 }
 
 .index-footer .footer-menu .last {
@@ -468,6 +468,5 @@ $WidthSize : 1600px;
   margin-right: 150px;
   color: #fff;
   font-size: 12px;
-  font-weight: 600; 
+  font-weight: 600;
 }
-

@@ -20,7 +20,7 @@ mongoose.connect(dbUrl);
 
 
 // view engine setup
-app.set('views', path.join(__dirname, './src/views/pages'));
+app.set('views', path.join(__dirname, './public/pages'));
 app.engine('html', ejs.__express);
 app.set('view engine', 'html');
 app.use(logger('dev'));
