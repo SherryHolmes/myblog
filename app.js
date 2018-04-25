@@ -10,6 +10,7 @@ var cookieSession = require('cookie-session');
 var multipart = require('connect-multiparty');
 var logger = require('morgan');
 var serveStatic = require('serve-static');
+var ejs = require('ejs');
 var app = express();
 app.locals.moment = require('moment');
 /** mongoose */
@@ -19,8 +20,9 @@ mongoose.connect(dbUrl);
 
 
 // view engine setup
-app.set('views', path.join(__dirname, './mongodb/views/pages'));
-app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './src/views/pages'));
+app.engine('html', ejs.__express);
+app.set('view engine', 'html');
 app.use(logger('dev'));
 app.use(multipart());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -39,7 +41,7 @@ app.use(cookieSession({
 
 require('./routes/routes')(app);
 // models loading
-var models_path = __dirname + '/mongodb/models';
+var models_path = __dirname + '/src/models';
 
 var walk = function (path) {
   fs
