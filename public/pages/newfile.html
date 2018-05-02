@@ -11,10 +11,10 @@
   <script src="../js/calendar.js"></script>
   <link rel="stylesheet" href="../libs/redactor/redactor/redactor.css" />
   <script src="../libs/redactor/redactor/redactor.min.js"></script>
-  <link rel="stylesheet" href="../css/blog.css">
   <link rel="stylesheet" href="../css/newfile.css">
   <script src="../js/digit.js"></script>
   <script src="../js/countdown.js"></script>
+  <script src="../js/newfile.js"></script>
   <script type="text/javascript">
     $(document).ready(
       function () {
@@ -48,22 +48,12 @@
   </div>
   <div class="blog-panel">
     <div class="panel-left clearfloat">
-      <div class="newfile-body">
-        <div class="body-title">
-          <div class="type-check-box">
-            <select id="selType">
-              <option value="0">请选择</option>
-              <option value="1">原创</option>
-              <option value="2">转载</option>
-              <option value="3">翻译</option>
-            </select>
-          </div>
-          <input type="text" id="txt-title" maxlength="100" placeholder="输入文章标题">
-        </div>
-      </div>
       <div class="body-file">
-        <textarea id="article-content" name="content" value=<% article.title %> ></textarea>
-        <button type="text" class="message" value="发表">发表</button>
+        <form method="post" action="/article" enctype="multipart/form-data">
+          <input type="text" id="txt-title" name="title" maxlength="100" placeholder="输入文章标题" value=<% article.title %>>
+          <textarea id="article-content" name="content" value=<% article.content %> ></textarea>
+          <input type="submit" class="message" id="article-submit" value="发布文章">
+        </form>
       </div>
     <div class="panel-right clearfloat">
       <a href="/article/new" class="new-file">
@@ -128,46 +118,4 @@
       </div>
     </footer>
 </body>
-
-<!-- <body>
-  <div class="public-header">
-    <div class="header-logo">Sherry<span>H</span>olmes</div>
-    <% if(user) {%>
-      <div class="nav-login">
-        <div class="login-item user-name">
-          <%=user.name %><span> | </span>
-        </div>
-        <div class="login-item"><a href="/logout">Logout</a></div>
-      </div>
-      <% } else {%>
-        <div class="nav-login">
-          <a href="/login">Login<span> | </span>Logup</a>
-        </div>
-        <% } %>
-          <ul class="header-menu">
-            <li class="item"><a href="/">Home</a></li>
-            <li class="item"><a href="/blog">Articles</a></li>
-            <li class="item active"><a href="/article/message">Messages</a></li>
-            <li class="item"><a href="">Contact</a></li>
-          </ul>
-  </div>
-  <div class="newfile-body">
-    <div class="body-title">
-      <div class="type-check-box">
-        <select id="selType">
-          <option value="0">请选择</option>
-          <option value="1">原创</option>
-          <option value="2">转载</option>
-          <option value="3">翻译</option>
-        </select>
-      </div>
-      <input type="text" id="txt-title" maxlength="100" placeholder="输入文章标题">
-    </div>
-    <div class="body-file">
-      <textarea id="article-content" name="content" value=<% article.title %> ></textarea>
-      <button type="text" class="message" value="发表">发表</button>
-    </div>
-  </div>
-</body> -->
-
 </html>

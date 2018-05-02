@@ -1,6 +1,9 @@
+@import "_reset.scss";
+@import "_public.scss";
+
 .newfile-body {
   position: relative;
-  margin-top: 70px;
+  width: 100%;
 }
 
 .body-title,
@@ -12,3 +15,53 @@
 .txt-title {
   float: left;
 } 
+
+#txt-title {
+  height: 40px;
+  width: 100%;
+  background: #e0e0e0;
+  outline: none;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+}
+
+#txt-title:focus {
+  background: #fff;
+  border: 1px solid #000;
+}
+
+.redactor_toolbar {
+  display: block;
+  width: inherit;
+}
+
+.redactor_editor {
+  width: inherit;
+  height: 500px;
+  background: #e0e0e0 !important;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+}
+
+.redactor_editor:focus {
+  border: 1px solid #000;
+}
+
+.body-file .message {
+  width: 100px;
+  height: 40px;
+  margin-top: 20px;
+  float: right;
+  font-size: 16px;
+  font-weight: 500;
+  background: #fff;
+  border: 1px solid #de2323;
+  border-radius: 10px;
+  outline: none;
+}
+
+.body-file .message:hover{
+  cursor: pointer;
+  background: #eb5252;
+  color: #fff;
+}

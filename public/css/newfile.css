@@ -1,6 +1,251 @@
+@charset "UTF-8";
+/* reset.css */
+body, div, dl, dt, dd, ul, li, h1, h2, section,
+h3, h4, h5, h6, input, form, a, p, textarea {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Segoe UI", "Adobe Fan Heiti Std B", Arial, sans-serif; }
+
+body {
+  overflow-x: hidden;
+  margin: 0 auto; }
+
+ol, ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  display: block;
+  color: #fff; }
+
+img {
+  border: none;
+  display: block; }
+
+/*清除浮动*/
+.clearfloat {
+  zoom: 1; }
+
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: '';
+  visibility: hidden;
+  height: 0; }
+
+.public-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 200;
+  background: -webkit-radial-gradient(#212121, #393939, #212121);
+  /* Safari 5.1 - 6.0 */
+  background: -o-radial-gradient(#212121, #393939, #212121);
+  /* Opera 11.6 - 12.0 */
+  background: -moz-radial-gradient(#212121, #393939, #212121);
+  /* Firefox 3.6 - 15 */
+  background: radial-gradient(#212121, #393939, #212121);
+  /* 标准的语法（必须放在最后） */ }
+
+.public-header .header-body {
+  width: 1536px;
+  margin: 0 auto; }
+
+.public-header .header-logo {
+  float: left;
+  margin-left: 160px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 550;
+  line-height: 60px;
+  font-style: italic; }
+
+.public-header .header-logo > span {
+  color: #de2323; }
+
+.public-header .header-menu {
+  float: right;
+  margin-right: 150px; }
+
+.public-header .header-menu li {
+  float: left; }
+
+.public-header .header-menu .item {
+  margin-right: 12px;
+  width: 120px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  outline: 0;
+  padding: 5px 12px;
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  font-style: italic;
+  text-shadow: 1px 1px #1f272b;
+  border: 1px solid #1c252b;
+  border-bottom-left-radius: 8px;
+  -moz-border-bottom-left-radius: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  -moz-border-bottom-right-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  background: #1e1e1e;
+  /* old browsers */
+  background: -moz-linear-gradient(top, #3D4850 3%, #313d45 4%, #1e1e1e 100%);
+  /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #3D4850), color-stop(4%, #313d45), color-stop(100%, #1e1e1e));
+  /* webkit */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D4850', endColorstr='#1e1e1e',GradientType=0 );
+  /* ie */
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  /* CSS3 */
+  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  /* Firefox */
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  /* Safari, Chrome */ }
+
+.public-header .header-menu .item a {
+  color: #f7f7f7; }
+
+.header-menu .item:hover {
+  background: #eb5252; }
+
+.public-header .header-menu .active {
+  background: #de2323; }
+
+.blog-title {
+  width: 100%;
+  height: 90px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  font-style: italic; }
+
+.blog-title .title-content {
+  float: left; }
+
+.blog-title .title-content p {
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 30px; }
+
+.blog-panel {
+  position: relative;
+  width: 1200px;
+  height: 100%;
+  margin-top: 120px; }
+
+.blog-panel .panel-left {
+  float: left;
+  width: 800px;
+  margin-left: 0;
+  margin-bottom: 100px; }
+
+.blog-panel .panel-right {
+  position: fixed;
+  left: 900px;
+  height: 1000px;
+  width: 300px;
+  right: 0;
+  top: 120px;
+  margin-bottom: 100px; }
+
+.panel-right .new-file {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  color: #3D4850;
+  font-size: 30px; }
+
+.panel-right .new-file:hover {
+  color: #202020;
+  text-decoration: underline; }
+
+.right-list .list-canvas {
+  position: relative;
+  height: 80px;
+  width: 280px;
+  margin-top: 20px;
+  box-shadow: 0 0 0 5px #1e1e1e, 0 0 0 10px #de2323;
+  border-radius: 10px; }
+
+.right-list .Calendar {
+  position: relative;
+  margin-top: 60px;
+  background: #e0e0e0; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  height: 90px;
+  width: 100%;
+  text-align: center;
+  background: -webkit-radial-gradient(#212121, #393939, #212121);
+  /* Safari 5.1 - 6.0 */
+  background: -o-radial-gradient(#212121, #393939, #212121);
+  /* Opera 11.6 - 12.0 */
+  background: -moz-radial-gradient(#212121, #393939, #212121);
+  /* Firefox 3.6 - 15 */
+  background: radial-gradient(#212121, #393939, #212121);
+  /* 标准的语法（必须放在最后） */ }
+
+footer ul.share-group {
+  display: block;
+  width: 1080px;
+  margin: 0 auto;
+  line-height: 60px; }
+
+.share-group li {
+  display: inline-block; }
+
+.share-group li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  margin-right: 20px; }
+
+.redactor_toolbar {
+  display: none; }
+
+.redactor_editor {
+  height: 100px;
+  background: #e0e0e0 !important;
+  width: 100%;
+  overflow: hidden;
+  padding: 2px !important; }
+
+.nav-login {
+  float: right;
+  margin-right: 50px;
+  font-family: "Segoe UI";
+  font-weight: 700;
+  color: #fff;
+  line-height: 60px; }
+
+.nav-login .user-name span {
+  color: #fff; }
+
+.nav-login .user-name {
+  color: #de2323; }
+
+.nav-login a:hover {
+  color: #de2323;
+  text-decoration: underline; }
+
+.nav-login .login-item {
+  float: left; }
+
 .newfile-body {
   position: relative;
-  margin-top: 70px; }
+  width: 100%; }
 
 .body-title,
 .body-file {
@@ -9,5 +254,48 @@
 .type-check-box,
 .txt-title {
   float: left; }
+
+#txt-title {
+  height: 40px;
+  width: 100%;
+  background: #e0e0e0;
+  outline: none;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 10px; }
+
+#txt-title:focus {
+  background: #fff;
+  border: 1px solid #000; }
+
+.redactor_toolbar {
+  display: block;
+  width: inherit; }
+
+.redactor_editor {
+  width: inherit;
+  height: 500px;
+  background: #e0e0e0 !important;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0; }
+
+.redactor_editor:focus {
+  border: 1px solid #000; }
+
+.body-file .message {
+  width: 100px;
+  height: 40px;
+  margin-top: 20px;
+  float: right;
+  font-size: 16px;
+  font-weight: 500;
+  background: #fff;
+  border: 1px solid #de2323;
+  border-radius: 10px;
+  outline: none; }
+
+.body-file .message:hover {
+  cursor: pointer;
+  background: #eb5252;
+  color: #fff; }
 
 /*# sourceMappingURL=newfile.css.map */
