@@ -1,0 +1,16 @@
+@import "_reset.scss";
+@import "_public.scss";
+
+
+.cartoon-list .cartoon-item {
+  cursor: pointer;
+} 
+
+.cartoon-list .cartoon-item:hover {
+  text-decoration: underline;
+}
+
+.cartoon-list .cartoon-item img{
+  width: 30px;
+  height: auto;
+}

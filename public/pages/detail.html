@@ -14,10 +14,12 @@
   <link rel="stylesheet" href="../css/detail.css">
   <script src="../js/digit.js"></script>
   <script src="../js/countdown.js"></script>
+  <script src="../js/detail.js"></script>
   <title>SherryHolmes文章</title>
   <script type="text/javascript">
     $(document).ready(
       function () {
+        $("#fromContent").focus();
         $('.article-content').redactor();
         $('.redactor_editor').attr('contenteditable', false);
       }
@@ -40,10 +42,10 @@
           </div>
           <div class="login-item"><a href="/logout">Logout</a></div>
         </div>
-        <% } else {%>
-          <div class="nav-login">
+      <% } else {%>
+        <div class="nav-login">
             <a href="/login">Login<span> | </span>Logup</a>
-      </div>
+        </div>
       <% } %>
     <ul class="header-menu">
       <li class="item"><a href="/">Home</a></li>
@@ -75,10 +77,47 @@
           <ul class="links">
             <li class="left-item"><a href="#">收藏</a></li>
             <li class="left-item"><a href="#">转发</a></li>
-            <li class="left-item"><a href="#">阅读<%= article.pv %></a></li>
+            <li class="left-item">阅读<%= article.pv %></li>
+            <li class="left-item">
+              <% if(!user) { %>
+                <a href="#", data-toggle="modal", data-target="#signinModal" style="color: #000;">登录后评论</a>
+              <% } %>
+            </li>
           </ul>
         </li>
       </ul>
+      <div class="comment-box">
+        <div class="box-title">评论区</div>
+        <% for(var i=0; i<comments.length; i++) { %>
+          <input type="hidden", data-cid="<%=comments[i]._id %>", data-tid="<%=comments[i].from._id %>"/>
+          <section class="comment-item clearfloat">
+            <div class="item-floor">第<%=i+1 %>楼</div>
+            <div class="comment", data-cid="<%=comments[i]._id %>", data-tid="<%=comments[i].from._id %>">
+              <div class=""><%=comments[i].from.name %></div>
+              <div><%=comments[i].content %></div>
+            </div>
+            <% if(comments[i].reply && comments[i].reply.length > 0) { %>
+              <% for(var j=0; j<comments[i].reply.length; j++) { %>
+                <div class="comment", data-cid="<%=comments[i].reply[j]._id %>", data-tid="<%=comments[i].reply[j].from._id %>">
+                  <h4 class="media-heading"><%=comments[i].reply[j].from.name %></h4>
+                  <span class="text-info">&nbsp;回复&nbsp; <%=comments[i].reply[j].to.name %>:</span>
+                  <p><%=comments[i].reply[j].content %></p>
+                </div>
+              <% } %>
+            <% } %>
+          </section>
+        <% } %>
+      </div>
+      <div id="comments">
+        <form id="commentForm" method="POST", action="/user/comment">
+          <input type="hidden", name="article", value=<%=article._id %> />
+          <% if(user) { %>
+            <input type="hidden", name="from", value=<%=user._id %> />
+            <textarea type="text" name="content" id="fromContent" placeholder="想对作者说点什么"></textarea>
+            <button type='submit' class="btn btn-primary">提交</button>
+          <% } %>
+        </form>
+      </div>
     </div>
     <div class="panel-right clearfloat">
       <a href="/article/new" class="new-file">

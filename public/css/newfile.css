@@ -18,12 +18,9 @@ a {
   display: block;
   color: #fff; }
 
-img {
-  border: none;
-  display: block; }
-
 /*清除浮动*/
 .clearfloat {
+  clear: both;
   zoom: 1; }
 
 .clearfloat:after {
@@ -167,8 +164,10 @@ img {
   color: #202020;
   text-decoration: underline; }
 
+.right-list .list-item {
+  position: relative; }
+
 .right-list .list-canvas {
-  position: relative;
   height: 80px;
   width: 280px;
   margin-top: 20px;
@@ -176,9 +175,18 @@ img {
   border-radius: 10px; }
 
 .right-list .Calendar {
-  position: relative;
   margin-top: 60px;
   background: #e0e0e0; }
+
+.right-list .cartoon {
+  display: block;
+  margin-top: 30px;
+  margin-left: 20px;
+  color: #000;
+  font-size: 18px; }
+
+.right-list .cartoon:hover {
+  text-decoration: underline; }
 
 footer {
   position: fixed;

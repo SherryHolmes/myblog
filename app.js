@@ -62,47 +62,6 @@ var walk = function (path) {
 };
 walk(models_path);
 
-
-
-
-// app.use(express.session({
-//   secret: 'db',
-//   saveUninitialized: false, // don't create session until something stored
-//   resave: false, //don't save session if unmodified
-//   store: new MongoStore({
-//     url: 'mongodb://localhost/test-app',
-//     touchAfter: 24 * 3600 // time period in seconds
-//   })
-// }));
-
-// //增加一些debug信息供调试
-// var env = process.env.NODE_ENV || 'development';
-// // catch 404 and forward to error handler
-// app.use(function(req, res, next) {
-//   var err = new Error('Not Found');
-//   err.status = 404;
-//   next(err);
-// });
-
-
-// // error handler
-// app.use(function(err, req, res, next) {
-//   // set locals, only providing error in development
-//   res.locals.message = err.message;
-//   // res.locals.error = req.app.get('env') === 'development' ? err : {};
-//   if ('development' === env) {
-//     app.set('showStackError', true);
-//     app.use(logger(':method :url :status'));
-//     app.locals.pretty = true;//网页源代码格式化
-//     mongoose.set('debug', true)  //数据库debug信息
-//   }
-//   // render the error page
-//   res.status(err.status || 500);
-//   res.render('error');
-// });
-
-
-
 //增加一些debug信息供调试
 var env = process.env.NODE_ENV || 'development';
 if ('development' === env) {

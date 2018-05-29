@@ -21,11 +21,11 @@ window.onload = function(){
   RADIUS = Math.round(WINDOW_WIDTH * 4 / 5 / 108) - 1;
   MARGIN_TOP = Math.round(WINDOW_HEIGHT/5);
 
-  console.log(WINDOW_WIDTH);
-  console.log(WINDOW_HEIGHT);
-  console.log(MARGIN_LEFT);
-  console.log(RADIUS);
-  console.log(MARGIN_TOP);
+  // console.log(WINDOW_WIDTH);
+  // console.log(WINDOW_HEIGHT);
+  // console.log(MARGIN_LEFT);
+  // console.log(RADIUS);
+  // console.log(MARGIN_TOP);
 
 
   var canvas = document.getElementById('canvas-clock');

@@ -6,8 +6,10 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "async": "^2.6.0",
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
     "connect": "^3.6.5",
     "connect-mongo": "^2.0.1",
     "connect-multiparty": "^2.1.0",
@@ -18,10 +20,12 @@
     "express": "~4.15.5",
     "express-session": "^1.15.6",
     "fs": "^0.0.1-security",
+    "mkdirp": "^0.5.1",
     "moment": "^2.20.1",
     "mongoose": "^5.0.2",
     "morgan": "^1.9.0",
     "path": "^0.12.7",
+    "request": "^2.86.0",
     "serve-favicon": "~2.4.5",
     "underscore": "^1.8.3"
   },

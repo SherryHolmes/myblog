@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Article = require('../models/article');
+var Comment = require('../models/comment');
 var _ = require('underscore');
 
 exports.new = function (req, res) {
@@ -11,7 +12,7 @@ exports.new = function (req, res) {
 
 
 
-// update article  
+// update article
 exports.update = function (req, res) {
   var id = req.params.id;
   if (id) {
@@ -72,10 +73,17 @@ exports.detail = function (req, res) {
       if (err) {
         console.log(err);
       }
-      res.render('detail', {
-        title: article.title,
-        content: article.content,
-        article: article
+      Comment
+        .find({article: id})
+        .populate('from', 'name')
+        .populate('reply.from reply.to', 'name')
+        .exec(function(err, comments) {
+          res.render('detail', {
+            title: article.title,
+            content: article.content,
+            article: article,
+            comments: comments
+          })
       })
     })
   }
@@ -100,8 +108,8 @@ exports.blog = function (req, res, next) {
     if (err) {
       console.log(err);
     }
-    res.render('blog', 
-    { 
+    res.render('blog',
+    {
       title: 'my articles',
       articles: articles
     });

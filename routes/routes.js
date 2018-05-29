@@ -2,6 +2,8 @@ var Index = require('../src/controllers/index');
 var Article = require('../src/controllers/article');
 var User = require('../src/controllers/user');
 var Message = require('../src/controllers/message');
+var Comment = require('../src/controllers/comment');
+var Cartoon = require('../src/controllers/cartoon');
 
 module.exports = function (app) {
   // pre handle user 预处理
@@ -26,6 +28,9 @@ module.exports = function (app) {
   app.get('/blog', Article.blog);
   app.get('/articleDetail/id', Article.articleDetail);
 
+  // cartoon
+  app.get('/cartoon/list', Cartoon.list);
+
   // User
   app.post('/user/logup', User.logup);
   app.post('/user/login', User.login);
@@ -38,5 +43,8 @@ module.exports = function (app) {
   // Message
   app.post('/message', User.loginRequired, Message.save);
   app.get('/article/message', Message.message);
+
+  // Comment
+  app.post('/user/comment', User.loginRequired, Comment.save);
 
 };

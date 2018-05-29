@@ -1,6 +1,7 @@
 var mongoose = require('mongoose')
 var User = require('../models/user');
 
+var signurl = "/";
 //showLogin
 exports.showLogin = function(req, res) {
   var _user = req.session.user;
@@ -91,7 +92,7 @@ exports.logup = function(req, res) {
         if(err) {
           console.log(err);
         }
-        res.redirect('/')
+        res.redirect(signurl);
       })
     }
   }) 
@@ -117,7 +118,7 @@ exports.login = function(req, res) {
       }
       if (isMatch) {
         req.session.user = user
-        return res.redirect('/')
+        return res.redirect(signurl);
       }
       else{
         return res.redirect('/login')
@@ -130,7 +131,7 @@ exports.login = function(req, res) {
 exports.logout = function(req, res) {
 	delete req.session.user;
 	// delete app.locals.user
-	res.redirect("/");
+	res.redirect(signurl);
 };
 
 //user logout  /logout
@@ -157,6 +158,7 @@ exports.list = function(req, res) {
 // midware for user loginRequired 中间件权限控制
 exports.loginRequired = function(req, res, next) {
   var user = req.session.user;
+  signurl = req.url;
   if (!user) {
     return res.redirect('/login')
   }

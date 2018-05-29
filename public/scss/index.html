@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <script src="/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link href="/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+    <link href="/libs/jquery-ui/themes/smoothness/jquery-ui.min.css" rel="stylesheet">
+    <script src="/libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/libs/mqttws31.min.js" type="text/javascript"></script>
+    <script src="/libs/moment/moment.js"></script>
+    <link rel="stylesheet" href="/css/public.css">
+    <script src="/js/public.js"></script>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/js/index.js"></script>
+  </head>
+  <body> 
+    <div class="public-header">
+      <div class="header-logo"><img src="/images/public-logo.png" alt=""></div>
+      <div class="header-line"></div>
+      <div class="header-login">
+      </div>
+    </div>
+    <div class="public-menu">
+      <div class="menu-icon active"><i class="fa fa-th-list fa-fw"></i></div><a href="/" class="menu-title">智能车库管理系统</a>
+      <div class="sub-title"></div>
+    </div>
+    <div class="public-left">
+      <ul class="main-menu">
+        <li><a href="/" class="link-home"> 
+            <div class="menu-flag"><img src="/images/home.gif"></div>
+            <div class="menu-content">首页</div></a></li>
+        <li><a href="/control" class="link-control"> 
+            <div class="menu-flag"><img src="/images/control_min.gif"></div>
+            <div class="menu-content">车库监控</div></a></li>
+        <li class="garage-manage"> 
+          <div class="menu-flag"><img src="/images/manage_min.gif"></div>
+          <div class="menu-content">车库管理</div><i class="icon-direction fa fa-angle-up fa-fw"> </i>
+        </li>
+        <ul class="sub-menu">
+          <li class="sub-item"><a href="/garage/detail">车库详情</a></li>
+          <li class="sub-item"><a href="/admin/garage/list">车库配置</a></li>
+          <li class="sub-item"><a href="/history">历史记录</a></li>
+          <li class="sub-item"><a href="/admin/user/list">用户列表</a></li>
+          <li class="sub-item"><a href="/admin/error/list">故障代码列表</a></li>
+        </ul>
+        <li class="garage-about">
+          <div class="menu-flag"><img src="/images/about.gif"></div>
+          <div class="menu-content">关于产品</div><i class="icon-direction fa fa-angle-up fa-fw"> </i>
+        </li>
+        <ul class="sub-menu">
+          <li class="sub-item"><a href="/about">关于我们</a></li>
+          <li class="sub-item"><a href="/product">经营产品</a></li>
+          <li class="sub-item"><a href="/performance">公司成绩</a></li>
+          <li class="sub-item"><a href="/contact">联系我们              </a></li>
+        </ul>
+      </ul>
+    </div>
+    <div class="public-right">
+      <div class="right-body">
+        <div data="/control" class="item item-one">
+          <div class="icon-info"><img src="/images/control.gif" alt=""><span>车库监控</span></div>
+        </div>
+        <div data="/garage/detail" class="item item-two">
+          <div class="icon-info"><img src="/images/manage.gif" alt=""><span>车库管理</span></div>
+        </div>
+        <div data="/admin/garage/list" class="item item-three">
+          <div class="icon-info"><img src="/images/setting.gif" alt=""><span>配置列表</span></div>
+        </div>
+        <div data="/admin/error/list" class="item item-four">
+          <div class="icon-info"><img src="/images/error.gif" alt=""><span>故障代码</span>
+            <div class="toolbar"><a href="/" class="toolbar-item"><span class="toolbar-btn"><i class="toolbar-icon fa fa-home fa-2x"></i><span class="toolbar-text">回到<br>首页</span></span></a>
+              <div class="toolbar-item full-screen"><span class="toolbar-btn"><i class="toolbar-icon fa fa-arrows-alt fa-2x"></i><span class="toolbar-text">全屏<br>查看</span></span></div><a href="/contact" class="toolbar-item"><span class="toolbar-btn"><i class="toolbar-icon fa fa-commenting fa-2x"></i><span class="toolbar-text">联系<br>我们</span></span></a><a id="refresh" href="javascript:;" class="toolbar-item"><span class="toolbar-btn"><i class="toolbar-icon fa fa-refresh fa-2x"></i><span class="toolbar-text">刷新<br>页面</span></span></a><a href="javascript:history.back(1);" class="toolbar-item"><span class="toolbar-btn"><i class="toolbar-icon fa fa-mail-reply fa-2x"></i><span class="toolbar-text">返回<br>上层</span></span></a><a id="backtop" href="javascript:;" class="toolbar-item"><span class="toolbar-btn"><i class="toolbar-icon fa fa-arrow-up fa-2x"></i><span class="toolbar-text">返回<br>顶部</span></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

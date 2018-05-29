@@ -10,7 +10,7 @@ h3, h4, h5, h6, input, form, a, p, textarea {
 body {
   overflow-x: hidden;
   margin: 0 auto;
-} 
+}
 
 ol, ul, li {
   list-style: none; }
@@ -20,13 +20,11 @@ a {
   display: block;
   color: #fff; }
 
-img {
-  border: none;
-  display: block; }
-
 /*清除浮动*/
 .clearfloat {
-  zoom: 1; }
+  clear:both;
+  zoom: 1;
+}
 
 .clearfloat:after {
   display: block;

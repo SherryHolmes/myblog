@@ -65,7 +65,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D4850', endColorstr='#1e1e1e',GradientType=0 ); /* ie */
   box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* CSS3 */
   -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Firefox */
-  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Safari, Chrome */  
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Safari, Chrome */
 }
 
 .public-header .header-menu .item a {
@@ -110,7 +110,7 @@
 }
 
 .blog-panel .panel-left {
-  float: left; 
+  float: left;
   width: 800px;
   margin-left: 0;
   margin-bottom: 100px;
@@ -140,8 +140,11 @@
   text-decoration: underline;
 }
 
+.right-list .list-item {
+  position: relative;
+}
+
 .right-list .list-canvas {
-  position: relative; 
   height: 80px;
   width: 280px;
   margin-top: 20px;
@@ -150,11 +153,22 @@
 }
 
 .right-list .Calendar {
-  position: relative;
   margin-top: 60px;
   background: #e0e0e0;
-} 
- 
+}
+
+.right-list .cartoon {
+  display: block;
+  margin-top: 30px;
+  margin-left: 20px;
+  color: #000;
+  font-size: 18px;
+}
+
+.right-list .cartoon:hover {
+  text-decoration: underline;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -206,7 +220,7 @@ footer ul.share-group {
   margin-right: 50px;
   font-family: "Segoe UI";
   font-weight: 700;
-  color: #fff; 
+  color: #fff;
   line-height: 60px;
 }
 
